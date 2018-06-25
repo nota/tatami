@@ -9,7 +9,7 @@
     }
     @include hover-support {
       &:hover,
-      &:focus {
+      &.focus-visible {
         background-color: darken($color, 10%);
       }
     }

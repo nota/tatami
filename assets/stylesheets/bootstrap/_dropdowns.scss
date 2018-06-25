@@ -84,11 +84,15 @@
 
   @include hover-support {
     &:hover,
-    &:focus {
+    &.focus-visible {
       text-decoration: none;
       color: $dropdown-link-hover-color;
       background-color: $dropdown-link-hover-bg;
     }
+  }
+
+  &.focus-visible {
+    @include tab-focus-inset;
   }
 }
 

@@ -53,8 +53,7 @@ button.list-group-item {
 
   // Hover state
   @include hover-support {
-    &:hover,
-    &:focus {
+    &:hover {
       text-decoration: none;
       color: $list-group-link-hover-color;
       background-color: $list-group-hover-bg;

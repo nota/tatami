@@ -23,16 +23,13 @@
   &,
   &:active,
   &.active {
-    &:focus,
-    &.focus {
+    &.focus-visible {
       @include tab-focus;
     }
   }
 
   @include hover-support {
-    &:hover,
-    &:focus,
-    &.focus {
+    &:hover {
       color: $btn-default-color;
       text-decoration: none;
     }
@@ -117,7 +114,7 @@ a.btn {
   }
   @include hover-support {
     &:hover,
-    &:focus {
+    &.focus-visible {
       color: $link-hover-color;
       text-decoration: $link-hover-decoration;
       background-color: transparent;

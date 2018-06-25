@@ -40,7 +40,7 @@
   > li > span {
     @include hover-support {
       &:hover,
-      &:focus {
+      &.focus-visible {
         z-index: 2;
         color: $pagination-hover-color;
         background-color: $pagination-hover-bg;

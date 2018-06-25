@@ -16,6 +16,10 @@
   @include box-sizing(border-box);
 }
 
+// Focus reset
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
 
 // Body reset
 
@@ -55,14 +59,13 @@ a {
   }
 
   @include hover-support {
-    &:hover,
-    &:focus {
+    &:hover {
       color: $link-hover-color;
       text-decoration: $link-hover-decoration;
     }
   }
 
-  &:focus {
+  &.focus-visible {
     @include tab-focus;
   }
 }
@@ -146,7 +149,7 @@ hr {
 
 .sr-only-focusable {
   &:active,
-  &:focus {
+  &.focus-visible {
     position: static;
     width: auto;
     height: auto;

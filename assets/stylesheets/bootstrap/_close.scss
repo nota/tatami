@@ -14,7 +14,7 @@
 
   @include hover-support {
     &:hover,
-    &:focus {
+    &.focus-visible {
       color: $close-color;
       text-decoration: none;
       cursor: pointer;

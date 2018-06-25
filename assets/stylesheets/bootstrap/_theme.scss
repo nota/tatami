@@ -52,8 +52,7 @@
   border-color: darken($btn-color, 14%);
 
   @include hover-support {
-    &:hover,
-    &:focus  {
+    &:hover  {
       background-color: darken($btn-color, 12%);
       background-position: 0 -15px;
     }
@@ -114,7 +113,7 @@
 
 @include hover-support {
   .dropdown-menu > li > a:hover,
-  .dropdown-menu > li > a:focus {
+  .dropdown-menu > li > a.focus-visible {
     @include gradient-vertical($start-color: $dropdown-link-hover-bg, $end-color: darken($dropdown-link-hover-bg, 5%));
     background-color: darken($dropdown-link-hover-bg, 5%);
   }
