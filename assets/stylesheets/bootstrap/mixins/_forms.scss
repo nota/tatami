@@ -21,9 +21,7 @@
   .form-control {
     border-color: $border-color;
     &.focus-visible {
-      $color-rgba: rgba(red($border-color), green($border-color), blue($border-color), .3);
       border-color: $border-color;
-      box-shadow: 0 0 0 1px $color-rgba;
     }
   }
   // Set validation states also for addons
@@ -53,7 +51,8 @@
 // contrast against a dark gray background.
 @mixin form-control-focus($color: $input-border-focus) {
   &.focus-visible {
-    @include tab-focus-with-border;
+    outline: none;
+    border-color: $color;
   }
 }
 
