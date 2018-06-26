@@ -7,7 +7,7 @@
   }
   @include hover-support {
     a#{$parent}:hover,
-    a#{$parent}:focus {
+    a#{$parent}.focus-visible {
       color: darken($color, 10%);
     }
   }
