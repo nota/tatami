@@ -24,7 +24,7 @@
   &:active,
   &.active {
     &.focus-visible {
-      @include tab-focus;
+      @include tab-focus-with-border;
     }
   }
 
