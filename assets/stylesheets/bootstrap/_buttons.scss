@@ -113,8 +113,7 @@ a.btn {
     border-color: transparent;
   }
   @include hover-support {
-    &:hover,
-    &.focus-visible {
+    &:hover {
       color: $link-hover-color;
       text-decoration: $link-hover-decoration;
       background-color: transparent;
