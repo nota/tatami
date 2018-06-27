@@ -42,6 +42,10 @@ a.label {
       cursor: pointer;
     }
   }
+
+  &:active {
+    background-color: darken($color, 10%);
+  }
 }
 
 // Colors

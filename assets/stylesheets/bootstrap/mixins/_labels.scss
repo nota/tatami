@@ -14,4 +14,10 @@
       }
     }
   }
+
+  &[href] {
+    &:active {
+      background-color: darken($color, 10%);
+    }
+  }
 }
