@@ -44,7 +44,7 @@ a.label {
   }
 
   &:active {
-    background-color: darken($color, 10%);
+    color: $label-link-hover-color;
   }
 }
 
