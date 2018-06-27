@@ -36,15 +36,12 @@ a.label {
     cursor: pointer;
   }
   @include hover-support {
-    &:hover {
+    &:hover,
+    &.focus-visible {
       color: $label-link-hover-color;
       text-decoration: none;
       cursor: pointer;
     }
-  }
-
-  &:active {
-    color: $label-link-hover-color;
   }
 }
 

@@ -27,7 +27,8 @@
       }
 
       @include hover-support {
-        &:hover {
+        &:hover,
+        &.focus-visible {
           text-decoration: none;
           background-color: $nav-link-hover-bg;
         }

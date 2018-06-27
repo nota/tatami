@@ -52,7 +52,8 @@
   border-color: darken($btn-color, 14%);
 
   @include hover-support {
-    &:hover {
+    &:hover,
+    &.focus-visible {
       background-color: darken($btn-color, 12%);
       background-position: 0 -15px;
     }
