@@ -517,23 +517,6 @@
       color: $navbar-default-link-hover-color;
     }
   }
-
-  .btn-link {
-    color: $navbar-default-link-color;
-    @include hover-support {
-      &:hover,
-      &:focus {
-        color: $navbar-default-link-hover-color;
-      }
-    }
-    &[disabled],
-    fieldset[disabled] & {
-      &:hover,
-      &:focus {
-        color: $navbar-default-link-disabled-color;
-      }
-    }
-  }
 }
 
 // Inverse navbar
@@ -660,23 +643,6 @@
     @include hover-support {
       &:hover {
         color: $navbar-inverse-link-hover-color;
-      }
-    }
-  }
-
-  .btn-link {
-    color: $navbar-inverse-link-color;
-    @include hover-support {
-      &:hover,
-      &:focus {
-        color: $navbar-inverse-link-hover-color;
-      }
-    }
-    &[disabled],
-    fieldset[disabled] & {
-      &:hover,
-      &:focus {
-        color: $navbar-inverse-link-disabled-color;
       }
     }
   }
