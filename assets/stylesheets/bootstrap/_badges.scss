@@ -61,7 +61,7 @@
 a.badge {
   @include hover-support {
     &:hover,
-    &:focus {
+    &.focus-visible {
       color: $badge-link-hover-color;
       text-decoration: none;
       cursor: pointer;
