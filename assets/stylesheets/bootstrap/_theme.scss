@@ -71,7 +71,6 @@
     &,
     &:hover,
     &:focus,
-    &.focus,
     &:active,
     &.active {
       background-color: darken($btn-color, 12%);
