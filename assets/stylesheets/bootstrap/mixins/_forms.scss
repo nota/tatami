@@ -51,7 +51,7 @@
 // contrast against a dark gray background.
 @mixin form-control-focus($color: $input-border-focus) {
   &.focus-visible {
-    outline: none;
+    outline: 0;
     border-color: $color;
   }
 }

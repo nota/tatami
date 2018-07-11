@@ -22,11 +22,6 @@
   position: relative;
 }
 
-// Prevent the focus on the dropdown toggle when closing dropdowns
-.dropdown-toggle:focus {
-  outline: 0;
-}
-
 // The dropdown menu (ul)
 .dropdown-menu {
   position: absolute;
@@ -92,7 +87,7 @@
   }
 
   &.focus-visible {
-    @include tab-focus-inset;
+    @include tab-focus;
   }
 }
 
@@ -138,11 +133,6 @@
   // Show the menu
   > .dropdown-menu {
     display: block;
-  }
-
-  // Remove the outline when :focus is triggered
-  > a {
-    outline: 0;
   }
 }
 

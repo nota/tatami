@@ -76,7 +76,7 @@ select[size] {
 input[type="file"].focus-visible,
 input[type="radio"].focus-visible,
 input[type="checkbox"].focus-visible {
-  @include tab-focus-outline;
+  // Note: outline-color does not work on many browser, so just leave as default
 }
 
 // Adjust output element

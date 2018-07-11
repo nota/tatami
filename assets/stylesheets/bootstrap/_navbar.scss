@@ -22,7 +22,7 @@
   }
 
   a.focus-visible {
-    @include tab-focus-inset;
+    @include tab-focus;
   }
 }
 
