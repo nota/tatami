@@ -85,10 +85,6 @@
       background-color: $dropdown-link-hover-bg;
     }
   }
-
-  &.focus-visible {
-    @include tab-focus;
-  }
 }
 
 // Active state

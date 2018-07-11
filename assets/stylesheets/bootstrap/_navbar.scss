@@ -20,10 +20,6 @@
   @media (min-width: $grid-float-breakpoint) {
     border-radius: $navbar-border-radius;
   }
-
-  a.focus-visible {
-    @include tab-focus;
-  }
 }
 
 
