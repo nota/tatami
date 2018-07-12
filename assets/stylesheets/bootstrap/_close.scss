@@ -22,6 +22,10 @@
     }
   }
 
+  &.focus-visible {
+    @include tab-focus;
+  }
+
   // [converter] extracted button& to button.close
 }
 
