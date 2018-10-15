@@ -1,15 +1,25 @@
 # tatami
 
-## assets
-bootstrap-sass本体の開発
+All commands are run at PROJECT_ROOT.
 
+## Develop of bootstrap-sass
+Run below command.
+When changes of files in `assets/` are detected, they will be copied to `demo/pwa_ui/client/bootstrap-sass/assets/`.
 ```
 $ npm run watch
 ```
-asstes/ 下のファイルに変更があると demo/pwa_ui/client/bootstrap-sass にコピーする
-
 
 ## demo/pwa_ui
-単体アプリとして起動
+### Develop or launch a demo app
+It is necessary to execute the above section command in advance.
+Run below command.
+```
+$ npm run watch-demo
+```
 
-See: demo/pwa_ui/README.md
+Or see demo/pwa_ui/README.md
+
+### deploy to Heroku
+```
+$ git push heroku LOCAL_BRANCH_NAME:master
+```
