@@ -15,7 +15,8 @@
     "watch:javascripts": "chokidar 'assets/javascripts' -c 'cp -r assets/javascripts demo/pwa_ui/src/client/bootstrap-sass/assets/.'",
     "watch:stylesheets": "chokidar 'assets/stylesheets' -c 'cp -r assets/stylesheets demo/pwa_ui/src/client/bootstrap-sass/assets/.'",
     "copy-assets": "cp -r assets demo/pwa_ui/src/client/bootstrap-sass/.",
-    "heroku-postbuild": "npm run copy-assets && cd demo/pwa_ui && npm install && npm run build",
+    "prepare-demo": "npm run copy-assets && cd demo/pwa_ui && npm install && npm run build",
+    "heroku-postbuild": "npm run prepare-demo",
     "start": "cd demo/pwa_ui && npm run start"
   },
   "files": [

@@ -16,6 +16,12 @@ Run below command.
 ```
 $ npm run watch-demo
 ```
+Open http://localhost:2500
+
+If the first time, you need to run:
+```
+$ npm run prepare-demo
+```
 
 Or see demo/pwa_ui/README.md
 
