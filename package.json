@@ -6,14 +6,16 @@
   "style": "assets/stylesheets/_bootstrap.scss",
   "sass": "assets/stylesheets/_bootstrap.scss",
   "scripts": {
-    "demo": "run-p demo:**",
-    "demo:copy-assets": "cp -r assets demo/pwa_ui/src/client/bootstrap-sass/.",
-    "demo:watch": "cd demo/pwa_ui && npm run watch",
+    "watch-demo": "run-p demo:**",
+    "watch-demo:copy-assets": "cp -r assets demo/pwa_ui/src/client/bootstrap-sass/.",
+    "watch-demo:watch": "cd demo/pwa_ui && npm run watch",
     "watch": "run-p watch:**",
     "watch:fonts": "chokidar 'assets/fonts' -c 'cp -r assets/fonts demo/pwa_ui/src/client/bootstrap-sass/assets/.'",
     "watch:images": "chokidar 'assets/images' -c 'cp -r assets/images demo/pwa_ui/src/client/bootstrap-sass/assets/.'",
     "watch:javascripts": "chokidar 'assets/javascripts' -c 'cp -r assets/javascripts demo/pwa_ui/src/client/bootstrap-sass/assets/.'",
-    "watch:stylesheets": "chokidar 'assets/stylesheets' -c 'cp -r assets/stylesheets demo/pwa_ui/src/client/bootstrap-sass/assets/.'"
+    "watch:stylesheets": "chokidar 'assets/stylesheets' -c 'cp -r assets/stylesheets demo/pwa_ui/src/client/bootstrap-sass/assets/.'",
+    "postinstall": "cd demo/pwa_ui && npm run build",
+    "start": "cd demo/pwa_ui && npm run start"
   },
   "files": [
     "assets",
