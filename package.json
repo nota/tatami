@@ -5,6 +5,16 @@
   "main": "assets/javascripts/bootstrap.js",
   "style": "assets/stylesheets/_bootstrap.scss",
   "sass": "assets/stylesheets/_bootstrap.scss",
+  "scripts": {
+    "demo": "run-p demo:**",
+    "demo:copy-assets": "cp -r assets demo/pwa_ui/src/client/bootstrap-sass/.",
+    "demo:watch": "cd demo/pwa_ui && npm run watch",
+    "watch": "run-p watch:**",
+    "watch:fonts": "chokidar 'assets/fonts' -c 'cp -r assets/fonts demo/pwa_ui/src/client/bootstrap-sass/assets/.'",
+    "watch:images": "chokidar 'assets/images' -c 'cp -r assets/images demo/pwa_ui/src/client/bootstrap-sass/assets/.'",
+    "watch:javascripts": "chokidar 'assets/javascripts' -c 'cp -r assets/javascripts demo/pwa_ui/src/client/bootstrap-sass/assets/.'",
+    "watch:stylesheets": "chokidar 'assets/stylesheets' -c 'cp -r assets/stylesheets demo/pwa_ui/src/client/bootstrap-sass/assets/.'"
+  },
   "files": [
     "assets",
     "eyeglass-exports.js",
@@ -33,9 +43,11 @@
     "url": "https://github.com/twbs/bootstrap-sass/issues"
   },
   "devDependencies": {
-    "node-sass": "^3.8.0",
+    "chokidar-cli": "^1.2.0",
+    "ejs": "~2.4.2",
     "mincer": "~1.4.0",
-    "ejs": "~2.4.2"
+    "node-sass": "^3.8.0",
+    "npm-run-all": "^4.1.3"
   },
   "eyeglass": {
     "exports": "eyeglass-exports.js",
