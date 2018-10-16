@@ -9,15 +9,12 @@
 .clearfix {
   @include clearfix;
 }
-
 .center-block {
   @include center-block;
 }
-
 .pull-right {
   float: right !important;
 }
-
 .pull-left {
   float: left !important;
 }
@@ -30,15 +27,12 @@
 .hide {
   display: none !important;
 }
-
 .show {
   display: block !important;
 }
-
 .invisible {
   visibility: hidden;
 }
-
 .text-hide {
   @include text-hide;
 }

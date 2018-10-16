@@ -45,8 +45,7 @@
     "ejs": "~2.4.2",
     "mincer": "~1.4.0",
     "node-sass": "^3.8.0",
-    "sass-lint": "^1.12.1",
-    "sass-lint-auto-fix": "^0.15.0"
+    "sass-lint": "^1.12.1"
   },
   "eyeglass": {
     "exports": "eyeglass-exports.js",

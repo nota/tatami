@@ -6,14 +6,12 @@
 table {
   background-color: $table-bg;
 }
-
 caption {
   padding-top: $table-cell-padding;
   padding-bottom: $table-cell-padding;
   color: $text-muted;
   text-align: left;
 }
-
 th {
   text-align: left;
 }
@@ -99,7 +97,6 @@ th {
       }
     }
   }
-
   > thead > tr {
     > th,
     > td {
@@ -142,7 +139,6 @@ table col[class*="col-"] {
   float: none;
   display: table-column;
 }
-
 table {
   td,
   th {
@@ -215,7 +211,6 @@ table {
           > td:first-child {
             border-left: 0;
           }
-
           > th:last-child,
           > td:last-child {
             border-right: 0;
