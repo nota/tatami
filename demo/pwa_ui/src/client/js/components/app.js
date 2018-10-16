@@ -9,7 +9,7 @@ export default class App extends Component {
         <NavbarSample />
         <div className='container' id='cont'>
           <h1>
-            <img src='/assets/img/skelton.svg' alt='logo' className='logoimg' width='50' />
+            <img src='./public/assets/img/skelton.svg' alt='logo' className='logoimg' width='50' />
             Hello, touch device friendly UI components
           </h1>
           <Sandbox />

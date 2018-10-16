@@ -6,17 +6,9 @@
   "style": "assets/stylesheets/_bootstrap.scss",
   "sass": "assets/stylesheets/_bootstrap.scss",
   "scripts": {
-    "watch-demo": "run-p watch-demo:**",
-    "watch-demo:copy-assets": "npm run copy-assets",
-    "watch-demo:watch": "cd demo/pwa_ui && npm run watch",
-    "watch": "run-p watch:**",
-    "watch:fonts": "chokidar 'assets/fonts' -c 'cp -r assets/fonts demo/pwa_ui/src/client/bootstrap-sass/assets/.'",
-    "watch:images": "chokidar 'assets/images' -c 'cp -r assets/images demo/pwa_ui/src/client/bootstrap-sass/assets/.'",
-    "watch:javascripts": "chokidar 'assets/javascripts' -c 'cp -r assets/javascripts demo/pwa_ui/src/client/bootstrap-sass/assets/.'",
-    "watch:stylesheets": "chokidar 'assets/stylesheets' -c 'cp -r assets/stylesheets demo/pwa_ui/src/client/bootstrap-sass/assets/.'",
-    "copy-assets": "cp -r assets demo/pwa_ui/src/client/bootstrap-sass/.",
-    "prepare-demo": "npm run copy-assets && cd demo/pwa_ui && npm install && npm run build",
-    "heroku-postbuild": "npm run prepare-demo",
+    "build-demo": "cd demo/pwa_ui && npm run build",
+    "watch-demo": "cd demo/pwa_ui && npm run watch",
+    "prepare-demo": "cd demo/pwa_ui && npm install",
     "start": "cd demo/pwa_ui && npm run start"
   },
   "files": [

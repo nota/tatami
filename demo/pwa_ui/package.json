@@ -8,15 +8,13 @@
   },
   "description": "tatami",
   "scripts": {
-    "start": "node -r esm src/server.mjs",
     "build": "run-s build:**",
     "build:client": "browserify --verbose -t [ babelify ] -g [ uglifyify --keep_fnames ] src/client/js/index.js -o public/index.js",
     "build:sass": "sh scripts/build-sass.sh",
-    "build:assets": "sh scripts/build-assets/index.sh",
+    "build:assets": "sh scripts/build-assets.sh",
     "watch": "run-p watch:**",
-    "watch:dev": "DEBUG=sw_app* node -r esm src/server.mjs",
     "watch:client": "watchify --verbose --debug -t [ babelify ] -p browserify-notify src/client/js/index.js -o public/index.js",
-    "watch:sass": "chokidar 'src/client/css/**/*.scss' 'src/client/bootstrap-sass/assets/stylesheets' -c 'npm run build:sass -- --source-map-embed' --initial",
+    "watch:sass": "chokidar 'src/client/css/**/*.scss' '../../assets/stylesheets' -c 'npm run build:sass -- --source-map-embed' --initial",
     "watch:assets": "chokidar 'src/client/img/**' -c 'npm run build:assets' --initial"
   },
   "author": "notainc",
@@ -31,10 +29,6 @@
     "watchify": "^3.11.0"
   },
   "dependencies": {
-    "esm": "^3.0.84",
-    "express": "^4.16.4",
-    "express-force-ssl": "^0.3.2",
-    "morgan": "^1.9.1",
     "babel-cli": "^6.24.1",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",

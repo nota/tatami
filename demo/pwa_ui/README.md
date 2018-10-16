@@ -1,6 +1,6 @@
 # pwa_ui
 
-At _PROJECT_ROOT_/demo/pwa_ui, run below command to start demo.
+At _PROJECT_ROOT_/demo/pwa_ui, run below command to build demo.
 ```
 $ npm run watch
 ```
@@ -11,4 +11,5 @@ If the first time, you need to install npm modules.
 $ npm install
 ```
 
-Demo application will launch at http://localhost:2500
+Open ./demo/pwa_ui/index.html in your browser.
+
