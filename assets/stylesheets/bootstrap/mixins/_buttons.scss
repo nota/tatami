@@ -10,7 +10,7 @@
 
   @include hover-support {
     &:hover,
-    &:focus,
+    [data-focus-source='keyboard'] &:focus,
     &.focus {
       color: $color;
       background-color: darken($background, 10%);
@@ -26,7 +26,7 @@
 
     @include hover-support {
       &:hover,
-      &:focus,
+      [data-focus-source='keyboard'] &:focus,
       &.focus {
         color: $color;
         background-color: darken($background, 17%);
@@ -43,7 +43,7 @@
   &[disabled],
   fieldset[disabled] & {
     &:hover,
-    &:focus,
+    [data-focus-source='keyboard'] &:focus,
     &.focus {
       background-color: $background;
           border-color: $border;

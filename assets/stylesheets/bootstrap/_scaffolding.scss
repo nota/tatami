@@ -56,7 +56,7 @@ a {
 
   @include hover-support {
     &:hover,
-    &:focus {
+    [data-focus-source='keyboard'] &:focus {
       color: $link-hover-color;
       text-decoration: $link-hover-decoration;
     }

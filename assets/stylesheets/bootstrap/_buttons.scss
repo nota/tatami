@@ -31,7 +31,7 @@
 
   @include hover-support {
     &:hover,
-    &:focus,
+    [data-focus-source='keyboard'] &:focus,
     &.focus {
       color: $btn-default-color;
       text-decoration: none;

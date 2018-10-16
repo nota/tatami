@@ -28,7 +28,7 @@
 
       @include hover-support {
         &:hover,
-        &:focus {
+        [data-focus-source='keyboard'] &:focus {
           text-decoration: none;
           background-color: $nav-link-hover-bg;
         }

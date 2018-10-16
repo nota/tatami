@@ -1,11 +1,12 @@
 /* eslint-env browser */
 
 import 'babel-polyfill'
-if (location.pathname !== '/default.html') {
-  require('focus-visible')
-}
+
 import React from 'react'
 import {render} from 'react-dom'
+
+import './lib/focus-source'
+// import 'what-input'
 
 import App from './components/app'
 
