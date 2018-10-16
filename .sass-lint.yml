@@ -1,5 +1,7 @@
 files:
-  include: 'assets/stylesheets/**/*.scss'
+  include:
+    - 'assets/stylesheets/**/*.scss'
+    - 'demo/tatami/src/client/css/**/*.scss'
 rules:
   # Extends
   extends-before-declarations: 2
@@ -21,6 +23,7 @@ rules:
 
   # Disallows
   no-color-literals: 0
+  no-color-keywords: 2
   no-duplicate-properties: 2
   no-important: 0
   no-mergeable-selectors: 2
@@ -42,6 +45,7 @@ rules:
   single-line-per-selector: 2
 
   # Inner Spacing
+  space-after-colon: 2
   space-after-comma: 2
   space-around-operator: 2
   space-before-brace: 2
