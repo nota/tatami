@@ -11,5 +11,5 @@ If the first time, you need to install npm modules.
 $ npm install
 ```
 
-Open ./demo/pwa_ui/index.html in your browser.
+Open http://localhost:2500/ in your browser.
 
