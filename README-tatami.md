@@ -5,7 +5,7 @@ All commands are run at PROJECT_ROOT.
 ### Develop
 Changes to the files in the following directories are monitored and rebuilt.
 - assets/
-- demo/pwa_ui/src/client/
+- demo/tatami/src/client/
 
 The local server also starts up on port 2500.
 
@@ -19,8 +19,6 @@ If the first time, you need to run:
 ```
 $ npm run prepare-demo
 ```
-
-Or see demo/pwa_ui/README.md
 
 ### Update github pages
 Before push to master branch, run below command.

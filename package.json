@@ -6,10 +6,10 @@
   "style": "assets/stylesheets/_bootstrap.scss",
   "sass": "assets/stylesheets/_bootstrap.scss",
   "scripts": {
-    "build-demo": "cd demo/pwa_ui && npm run build",
-    "watch-demo": "cd demo/pwa_ui && npm run watch",
-    "prepare-demo": "cd demo/pwa_ui && npm install",
-    "start": "cd demo/pwa_ui && npm run start"
+    "build-demo": "cd demo/tatami && npm run build",
+    "watch-demo": "cd demo/tatami && npm run watch",
+    "prepare-demo": "cd demo/tatami && npm install",
+    "start": "cd demo/tatami && npm run start"
   },
   "files": [
     "assets",
