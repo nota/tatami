@@ -10,7 +10,8 @@
     "watch-demo": "cd demo/tatami && npm run watch",
     "prepare-demo": "cd demo/tatami && npm install",
     "start": "cd demo/tatami && npm run start",
-    "test:sass": "sass-lint -v --no-exit"
+    "test:sass": "sass-lint -v --no-exit",
+    "test:sass-fix": "sass-lint-auto-fix"
   },
   "files": [
     "assets",
@@ -43,7 +44,8 @@
     "ejs": "~2.4.2",
     "mincer": "~1.4.0",
     "node-sass": "^3.8.0",
-    "sass-lint": "^1.12.1"
+    "sass-lint": "^1.12.1",
+    "sass-lint-auto-fix": "^0.15.0"
   },
   "eyeglass": {
     "exports": "eyeglass-exports.js",

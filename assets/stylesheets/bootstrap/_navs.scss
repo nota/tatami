@@ -136,6 +136,7 @@
     > a {
       border-radius: $nav-pills-border-radius;
     }
+
     + li {
       margin-left: 2px;
     }
@@ -223,6 +224,7 @@
       border-bottom: 1px solid $nav-tabs-justified-link-border-color;
       border-radius: $border-radius-base $border-radius-base 0 0;
     }
+
     > .active > a,
     > .active > a:active,
     > .active > a:hover,
@@ -241,6 +243,7 @@
   > .tab-pane {
     display: none;
   }
+
   > .active {
     display: block;
   }

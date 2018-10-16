@@ -33,8 +33,10 @@
     @include translate(0, -25%);
     @include transition-transform(0.3s ease-out);
   }
+
   &.in .modal-dialog { @include translate(0, 0) }
 }
+
 .modal-open .modal {
   overflow-x: hidden;
   overflow-y: auto;
@@ -71,6 +73,7 @@
   background-color: $modal-backdrop-bg;
   // Fade for backdrop
   &.fade { @include opacity(0); }
+
   &.in { @include opacity($modal-backdrop-opacity); }
 }
 
@@ -137,6 +140,7 @@
     width: $modal-md;
     margin: 30px auto;
   }
+
   .modal-content {
     @include box-shadow(0 5px 15px rgba(0,0,0,.5));
   }
