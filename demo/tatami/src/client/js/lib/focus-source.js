@@ -6,15 +6,8 @@ module.exports = (() => {
   // cache document.documentElement
   const docElem = document.body
 
-  // last used input type
+  // last used input source
   let currentInput = 'initial'
-
-  // last focus state
-  let currentFocus = false
-
-  // event timer
-  let inputEventTimer = null
-  let focusEventTimer = null
 
   // list of modifier keys commonly used with the mouse and
   // can be safely ignored to prevent false keyboard detection
@@ -29,16 +22,12 @@ module.exports = (() => {
 
   let specificMap = []
 
-  // mapping of events to input types
+  // mapping of events to input sources
   const inputMap = {
     keydown: 'keyboard',
-    keyup: 'keyboard',
     mousedown: 'mouse',
-    mousemove: 'mouse',
     pointerdown: 'pointer',
-    pointermove: 'pointer',
     touchstart: 'touch',
-    touchend: 'touch'
   }
 
   // check support for passive event listeners
@@ -60,7 +49,7 @@ module.exports = (() => {
 
   const setUp = () => {
     addListeners()
-    doUpdate()
+    setFocus()
   }
 
   /*
@@ -68,33 +57,29 @@ module.exports = (() => {
    */
 
   const addListeners = () => {
-    // `pointermove`, `MSPointerMove`, `mousemove` and mouse wheel event binding
-    // can only demonstrate potential, but not actual, interaction
-    // and are treated separately
-    const options = supportsPassive ? { passive: true } : false
+    // Some components like Boostrap Dropdown menu call stopPropagate()
+    // useCapture to capture all events
+    const useCapture = true
+    const options = supportsPassive ? { passive: true, capture: true } : useCapture
 
     // pointer events (mouse, pen, touch)
     if (window.PointerEvent) {
-      window.addEventListener('pointerdown', setInput)
-      window.addEventListener('pointerup', setInput)
+      window.addEventListener('pointerdown', setInput, useCapture)
     } else {
       // mouse events
-      window.addEventListener('mousedown', setInput)
-      window.addEventListener('mouseup', setInput)
+      window.addEventListener('mousedown', setInput, useCapture)
 
       // touch events
       if ('ontouchstart' in window) {
         window.addEventListener('touchstart', setInput, options)
-        window.addEventListener('touchend', setInput, options)
       }
     }
 
     // keyboard events
-    window.addEventListener('keydown', setInput)
-    window.addEventListener('keyup', setInput)
+    window.addEventListener('keydown', setInput, useCapture)
 
     // focus events
-    window.addEventListener('focusin', setFocus)
+    window.addEventListener('focusin', setFocus, useCapture)
   }
 
   // checks conditions before updating new input
@@ -123,39 +108,17 @@ module.exports = (() => {
 
     if (!validEvent) return
 
+    // console.log('setInput', value)
+
     if (currentInput !== value) {
       currentInput = value
-
-      window.clearTimeout(inputEventTimer)
-
-      inputEventTimer = window.setTimeout(() => {
-        currentInput = null
-      }, 300)
-    }
-
-    // Sometimes keyDown event is not fired due to stopPropagation() eg: boostrap dropdown.
-    // So we will update by keyUp event. For this task, we need recent focus status
-    if (currentFocus) {
-      doUpdate()
-    }
-  }
-
-  const setFocus = event => {
-    currentFocus = true
-
-    window.clearTimeout(focusEventTimer)
-
-    focusEventTimer = window.setTimeout(() => {
-      currentFocus = false
-    }, 300)
-
-    if (currentInput) {
-      doUpdate()
     }
   }
 
   // updates the doc
-  const doUpdate = () => {
+  const setFocus = () => {
+    // console.log('setFocus')
+
     docElem.setAttribute(
       'data-focus-source',
       currentInput
