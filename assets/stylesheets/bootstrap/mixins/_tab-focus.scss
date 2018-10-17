@@ -1,9 +1,7 @@
-// WebKit-style focus
-
 @mixin tab-focus() {
   outline: 0;
 
-  [data-focus-source='keyboard'] &:focus {
+  [data-focus-source='keyboard'] & {
     $color-rgba: rgba(red($input-border-focus), green($input-border-focus), blue($input-border-focus), .6);
     outline: 0;
     box-shadow: 0 0px 0px 3px $color-rgba;
@@ -16,7 +14,7 @@
 @mixin tab-focus-outline() {
   outline: 0;
 
-  [data-focus-source='keyboard'] &:focus {
+  [data-focus-source='keyboard'] & {
     $color-rgba: rgba(red($input-border-focus), green($input-border-focus), blue($input-border-focus), .6);
     outline: 3px solid $color-rgba;
   }
