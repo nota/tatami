@@ -29,6 +29,7 @@
   left: 0;
   z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
+  flex-direction: column;
   float: left;
   min-width: 160px;
   padding: 5px 0;
@@ -71,17 +72,19 @@
 
 // Hover/Focus state
 .dropdown-menu > li > a {
-  &:active {
-    text-decoration: none;
-    color: $dropdown-link-hover-color;
-    background-color: $dropdown-link-hover-bg;
-  }
-
+  &:active,
   [data-use-hover] &:hover,
   [data-use-focus] &:focus {
     text-decoration: none;
     color: $dropdown-link-hover-color;
     background-color: $dropdown-link-hover-bg;
+  }
+}
+
+// Bring the focused item to the front
+.dropdown-menu > li {
+  &:focus-within {
+    z-index: 2;
   }
 }
 
@@ -126,7 +129,7 @@
 .open {
   // Show the menu
   > .dropdown-menu {
-    display: block;
+    display: flex;
   }
 
   // Remove the outline when :focus is triggered
