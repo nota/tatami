@@ -46,6 +46,11 @@
         cursor: $cursor-disabled;
       }
     }
+
+    // Bring the focused item to the front
+    &:focus-within {
+      z-index: 2;
+    }
   }
 
   // Open dropdowns
