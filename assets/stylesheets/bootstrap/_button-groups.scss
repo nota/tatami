@@ -11,10 +11,10 @@
   > .btn {
     position: relative;
     // Bring the "active" button to the front
-    &:hover,
-    &:focus,
     &:active,
-    &.active {
+    &.active,
+    [data-use-hover] &:hover,
+    [data-use-focus] &:focus {
       z-index: 2;
     }
   }

@@ -4,10 +4,11 @@ module.exports = (() => {
    */
 
   // cache document.documentElement
-  const docElem = document.body
+  const {body} = document
 
   // last used input source
   let currentInput = 'initial'
+  let currentIntent = 'initial'
 
   // list of modifier keys commonly used with the mouse and
   // can be safely ignored to prevent false keyboard detection
@@ -26,8 +27,11 @@ module.exports = (() => {
   const inputMap = {
     keydown: 'keyboard',
     mousedown: 'mouse',
+    mousemove: 'mouse',
     pointerdown: 'pointer',
+    pointermove: 'pointer',
     touchstart: 'touch',
+    touchmove: 'touch',
   }
 
   // check support for passive event listeners
@@ -65,13 +69,16 @@ module.exports = (() => {
     // pointer events (mouse, pen, touch)
     if (window.PointerEvent) {
       window.addEventListener('pointerdown', setInput, useCapture)
+      window.addEventListener('pointermove', setIntent, useCapture)
     } else {
       // mouse events
       window.addEventListener('mousedown', setInput, useCapture)
+      window.addEventListener('mousemove', setIntent, useCapture)
 
       // touch events
       if ('ontouchstart' in window) {
         window.addEventListener('touchstart', setInput, options)
+        window.addEventListener('touchmove', setIntent, options)
       }
     }
 
@@ -80,6 +87,25 @@ module.exports = (() => {
 
     // focus events
     window.addEventListener('focusin', setFocus, useCapture)
+  }
+
+  const setIntent = event => {
+    let value = inputMap[event.type]
+
+    if (value === 'pointer') {
+      value = pointerType(event)
+    }
+
+    if (currentIntent === value) return
+
+    currentIntent = value
+    // console.log('setIntent', value)
+
+    if (currentIntent === 'mouse') {
+      body.dataset.useHover = ''
+    } else {
+      delete body.dataset.useHover
+    }
   }
 
   // checks conditions before updating new input
@@ -108,6 +134,8 @@ module.exports = (() => {
 
     if (!validEvent) return
 
+    setIntent(event)
+
     // console.log('setInput', value)
 
     if (currentInput !== value) {
@@ -118,11 +146,11 @@ module.exports = (() => {
   // updates the doc
   const setFocus = () => {
     // console.log('setFocus')
-
-    docElem.setAttribute(
-      'data-focus-source',
-      currentInput
-    )
+    if (currentInput === 'keyboard') {
+      body.dataset.useFocus = ''
+    } else {
+      delete body.dataset.useFocus
+    }
   }
 
   /*

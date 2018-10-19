@@ -77,22 +77,20 @@
     background-color: $dropdown-link-hover-bg;
   }
 
-  @include hover-support {
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      color: $dropdown-link-hover-color;
-      background-color: $dropdown-link-hover-bg;
-    }
+  [data-use-hover] &:hover,
+  [data-use-focus] &:focus {
+    text-decoration: none;
+    color: $dropdown-link-hover-color;
+    background-color: $dropdown-link-hover-bg;
   }
 }
 
 // Active state
 .dropdown-menu > .active > a {
   &,
-  &:hover,
   &:active,
-  &:focus {
+  [data-use-hover] &:hover,
+  [data-use-focus] &:focus {
     color: $dropdown-link-active-color;
     text-decoration: none;
     outline: 0;
@@ -106,16 +104,16 @@
 
 .dropdown-menu > .disabled > a {
   &,
-  &:hover,
   &:active,
-  &:focus {
+  [data-use-hover] &:hover,
+  [data-use-focus] &:focus {
     color: $dropdown-link-disabled-color;
   }
 
   // Nuke hover/active/focus effects
-  &:hover,
   &:active,
-  &:focus {
+  [data-use-hover] &:hover,
+  [data-use-focus] &:focus {
     text-decoration: none;
     background-color: transparent;
     background-image: none; // Remove CSS gradient

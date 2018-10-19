@@ -73,11 +73,13 @@ select[size] {
 }
 
 // Focus for file, radio, and checkbox
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
-  // Note: box shadow does not work on Safari, so use outline for focus
-  @include tab-focus-outline;
+input[type="file"],
+input[type="radio"],
+input[type="checkbox"] {
+  [data-use-focus] &:focus {
+    // Note: box shadow does not work on Safari, so use outline for focus
+    @include tab-focus-outline;
+  }
 }
 
 // Adjust output element
