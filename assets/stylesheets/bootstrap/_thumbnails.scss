@@ -35,5 +35,6 @@ a.thumbnail {
   &.active,
   [data-use-hover] &:hover,
   [data-use-focus] &:focus {
-  border-color: $link-color;
+    border-color: $link-color;
+  }
 }

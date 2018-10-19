@@ -114,6 +114,7 @@
   [data-use-focus] &:focus {
     @include gradient-vertical($start-color: $dropdown-link-hover-bg, $end-color: darken($dropdown-link-hover-bg, 5%));
     background-color: darken($dropdown-link-hover-bg, 5%);
+  }
 }
 
 .dropdown-menu > .active > a {
