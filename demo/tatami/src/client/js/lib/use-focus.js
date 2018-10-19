@@ -64,18 +64,18 @@ module.exports = (() => {
    */
 
   const addListeners = () => {
-    // Some components like Boostrap Dropdown menu call stopPropagate()
-    // useCapture to capture all events
+    // set useCapture to true to capture all events
+    // some components like Boostrap Dropdown menu call stopPropagate()
     const useCapture = true
-    const options = supportsPassive ? { passive: true, capture: true } : useCapture
+    const options = supportsPassive ? { passive: true, capture: useCapture } : useCapture
 
     // pointer events (mouse, pen, touch)
     if (window.PointerEvent) {
-      window.addEventListener('pointerdown', setInput, useCapture)
-      window.addEventListener('pointermove', setIntent, useCapture)
+      window.addEventListener('pointerdown', setInput, options)
+      window.addEventListener('pointermove', setIntent, options)
     } else {
       // mouse events
-      window.addEventListener('mousedown', setInput, useCapture)
+      window.addEventListener('mousedown', setInput, options)
 
       // touch events
       if ('ontouchstart' in window) {
