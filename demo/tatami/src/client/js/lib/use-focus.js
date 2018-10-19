@@ -34,8 +34,6 @@ module.exports = (() => {
     touchstart: 'touch',
   }
 
-  let ignoreMouseMove = false
-
   // check support for passive event listeners
   let supportsPassive = false
 
