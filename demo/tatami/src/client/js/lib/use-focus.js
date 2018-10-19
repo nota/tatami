@@ -95,8 +95,7 @@ module.exports = (() => {
     const eventKey = event.which
     let value = inputMap[event.type]
 
-    if (window.PointerEvent &&
-      (event.type === 'keydown' || event.type === 'pointerdown')) {
+    if (event.type === 'pointerdown') {
       setIntent(event)
     }
 
@@ -128,7 +127,15 @@ module.exports = (() => {
     }
   }
 
-  const setFocus = () => doUpdate('focus')
+  const setFocus = () => {
+    doUpdate('focus')
+
+    // disable hover when focus changed by keyboard
+    if (currentInput === 'keyboard') {
+      currentIntent = currentInput
+      doUpdate('hover')
+    }
+  }
 
   // updates input intent for `pointermove`
   const setIntent = event => {
