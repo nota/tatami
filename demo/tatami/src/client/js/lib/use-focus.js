@@ -95,7 +95,8 @@ module.exports = (() => {
     const eventKey = event.which
     let value = inputMap[event.type]
 
-    if (event.type === 'keydown' || event.type === 'pointerdown') {
+    if (window.PointerEvent &&
+      (event.type === 'keydown' || event.type === 'pointerdown')) {
       setIntent(event)
     }
 
