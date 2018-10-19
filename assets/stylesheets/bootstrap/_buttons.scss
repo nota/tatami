@@ -23,8 +23,7 @@
   &,
   &:active,
   &.active {
-    [data-use-focus] &:focus,
-    &.focus {
+    [data-use-focus] &:focus {
       @include tab-focus;
     }
   }
