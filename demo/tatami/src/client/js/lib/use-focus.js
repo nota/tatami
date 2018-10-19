@@ -8,7 +8,9 @@ module.exports = (() => {
 
   // last used input source
   let currentInput = 'initial'
-  let currentIntent = 'initial'
+
+  // last used input intent
+  let currentIntent = 'ontouchstart' in window ? 'touch' : 'mouse'
 
   // list of modifier keys commonly used with the mouse and
   // can be safely ignored to prevent false keyboard detection
@@ -27,12 +29,12 @@ module.exports = (() => {
   const inputMap = {
     keydown: 'keyboard',
     mousedown: 'mouse',
-    mousemove: 'mouse',
     pointerdown: 'pointer',
     pointermove: 'pointer',
     touchstart: 'touch',
-    touchmove: 'touch',
   }
+
+  let ignoreMouseMove = false
 
   // check support for passive event listeners
   let supportsPassive = false
@@ -53,7 +55,8 @@ module.exports = (() => {
 
   const setUp = () => {
     addListeners()
-    setFocus()
+    doUpdate('focus')
+    doUpdate('hover')
   }
 
   /*
@@ -73,12 +76,10 @@ module.exports = (() => {
     } else {
       // mouse events
       window.addEventListener('mousedown', setInput, useCapture)
-      window.addEventListener('mousemove', setIntent, useCapture)
 
       // touch events
       if ('ontouchstart' in window) {
         window.addEventListener('touchstart', setInput, options)
-        window.addEventListener('touchmove', setIntent, options)
       }
     }
 
@@ -89,29 +90,14 @@ module.exports = (() => {
     window.addEventListener('focusin', setFocus, useCapture)
   }
 
-  const setIntent = event => {
-    let value = inputMap[event.type]
-
-    if (value === 'pointer') {
-      value = pointerType(event)
-    }
-
-    if (currentIntent === value) return
-
-    currentIntent = value
-    // console.log('setIntent', value)
-
-    if (currentIntent === 'mouse') {
-      body.dataset.useHover = ''
-    } else {
-      delete body.dataset.useHover
-    }
-  }
-
   // checks conditions before updating new input
   const setInput = event => {
     const eventKey = event.which
     let value = inputMap[event.type]
+
+    if (event.type === 'keydown' || event.type === 'pointerdown') {
+      setIntent(event)
+    }
 
     if (value === 'pointer') {
       value = pointerType(event)
@@ -134,8 +120,6 @@ module.exports = (() => {
 
     if (!validEvent) return
 
-    setIntent(event)
-
     // console.log('setInput', value)
 
     if (currentInput !== value) {
@@ -143,13 +127,40 @@ module.exports = (() => {
     }
   }
 
-  // updates the doc
-  const setFocus = () => {
-    // console.log('setFocus')
-    if (currentInput === 'keyboard') {
-      body.dataset.useFocus = ''
-    } else {
-      delete body.dataset.useFocus
+  const setFocus = () => doUpdate('focus')
+
+  // updates input intent for `pointermove`
+  const setIntent = event => {
+    let value = inputMap[event.type]
+
+    if (value === 'pointer') {
+      value = pointerType(event)
+    }
+
+    if (currentIntent !== value) {
+      currentIntent = value
+      // console.log('setIntent', value)
+      doUpdate('hover')
+    }
+  }
+
+  // updates the doc with new input/intent
+  const doUpdate = which => {
+    switch (which) {
+      case 'focus':
+        if (currentInput === 'keyboard') {
+          body.dataset.useFocus = ''
+        } else {
+          delete body.dataset.useFocus
+        }
+        break
+      case 'hover':
+        if (currentIntent === 'mouse') {
+          body.dataset.useHover = ''
+        } else {
+          delete body.dataset.useHover
+        }
+        break
     }
   }
 
