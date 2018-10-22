@@ -91,7 +91,6 @@ output {
   color: $input-color;
 }
 
-
 // Common form controls
 //
 // Shared size and type resets for form controls. Apply `.form-control` to any
@@ -217,6 +216,22 @@ input[type="search"] {
 
 .form-group {
   margin-bottom: $form-group-margin-bottom;
+}
+
+// Select
+select.form-control {
+  padding-right: 24px;
+  $double-arrow: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='#343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>";
+  background: $input-bg svg-uri($double-arrow) no-repeat right .75rem center;
+  background-size: 8px 10px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &::-ms-expand {
+    display: none; // for IE 10-11
+  }
 }
 
 
