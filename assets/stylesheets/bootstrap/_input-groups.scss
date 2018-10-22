@@ -58,7 +58,7 @@
 // Addon and addon wrapper for buttons
 .input-group-addon,
 .input-group-btn {
-  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 // Text input groups
@@ -72,6 +72,7 @@
   background-color: $input-group-addon-bg;
   border: 1px solid $input-group-addon-border-color;
   border-radius: $input-border-radius;
+  white-space: nowrap;
 
   // Sizing
   &.input-sm {
@@ -122,7 +123,6 @@
 // -------------------------
 .input-group-btn {
   display: flex;
-  white-space: nowrap;
 
   // Negative margin for spacing, position for bringing hovered/focused/actived
   // element above the siblings.
