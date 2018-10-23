@@ -35,10 +35,15 @@
   }
 
   .close {
-    margin-left: 8px;
-    margin-top: -2px;
+    position: relative;
+    top: -2px;
+    right: -21px;
     color: inherit;
   }
+}
+
+.alert-dismissible {
+  padding-right: ($alert-padding + 20);
 }
 
 // Alternate styles
