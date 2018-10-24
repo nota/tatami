@@ -208,10 +208,7 @@ select.form-control {
   $double-arrow: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='#343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>";
   background: $input-bg svg-uri($double-arrow) no-repeat right .75rem center;
   background-size: 8px 10px;
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  @include appearance(none);
 
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
@@ -240,10 +237,8 @@ select.form-control {
 .radio,
 .radio-inline {
   input[type="radio"] {
+    @include appearance(none);
     border-radius: 50%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     flex-shrink: 0;
     width: 20px;
     height: 20px;
@@ -266,10 +261,8 @@ select.form-control {
 .checkbox,
 .checkbox-inline {
   input[type="checkbox"] {
+    @include appearance(none);
     border-radius: $input-border-radius;
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
     flex-shrink: 0;
     width: 18px;
     height: 18px;
@@ -521,8 +514,8 @@ input[type="checkbox"] {
     display: flex;
     align-items: center;
 
-    > *:nth-child(n+2) {
-      margin-left: 5px;
+    > *:not(:last-child) {
+      margin-right: 5px;
     }
 
     // flex all the things for "inline"
@@ -544,8 +537,6 @@ input[type="checkbox"] {
 
     // Make static controls behave like regular ones
     .form-control-static {
-      padding-top: 0;
-      padding-bottom: 0;
       min-height: auto;
     }
 

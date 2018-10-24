@@ -87,26 +87,26 @@ export default function Forms () {
         <h4>Inline checkboxes and radios</h4>
         <div className='form-group'>
           <label className='checkbox-inline'>
-            <input type='checkbox' value='option1' /> 1
+            <input type='checkbox' value='option1' /> One
           </label>
           <label className='checkbox-inline'>
-            <input type='checkbox' value='option2' /> 2
+            <input type='checkbox' value='option2' /> Two
           </label>
           <label className='checkbox-inline'>
-            <input type='checkbox' value='option3' /> 3
+            <input type='checkbox' value='option3' /> Three
           </label>
         </div>
 
         <div className='form-group'>
           some text {' '}
           <label className='radio-inline'>
-            <input type='radio' name='inlineRadioOptions' value='option1' /> 1
+            <input type='radio' name='inlineRadioOptions' value='option1' /> One
           </label>
           <label className='radio-inline'>
-            <input type='radio' name='inlineRadioOptions' value='option2' /> 2
+            <input type='radio' name='inlineRadioOptions' value='option2' /> Two
           </label>
           <label className='radio-inline'>
-            <input type='radio' name='inlineRadioOptions' value='option3' /> 3
+            <input type='radio' name='inlineRadioOptions' value='option3' /> Three
           </label>
         </div>
         <br />
