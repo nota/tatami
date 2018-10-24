@@ -49,9 +49,19 @@ export default function Forms () {
           <label className='control-label' htmlFor='freetext'>Free text</label>
           <textarea className='form-control' id='freetext'  />
         </div>
+
+        <br />
+
+        <h3>Checkboxes and radios</h3>
+        <h4>Default (stacked)</h4>
         <div className='checkbox'>
           <label>
             <input type='checkbox' /> Check me out
+          </label>
+        </div>
+        <div className='checkbox'>
+          <label>
+            <input type='checkbox'  disabled /> Disabled check
           </label>
         </div>
         <div className='radio'>
@@ -66,6 +76,41 @@ export default function Forms () {
             Option two can be something else and selecting it will deselect option one
           </label>
         </div>
+        <div className='radio'>
+          <label>
+            <input type='radio' name='optionsRadios' id='optionsRadios2' value='option2' disabled />
+            This option is disabled
+          </label>
+        </div>
+
+        <br />
+        <h4>Inline checkboxes and radios</h4>
+        <div className='form-group'>
+          <label className='checkbox-inline'>
+            <input type='checkbox' id='inlineCheckbox1' value='option1' /> 1
+          </label>
+          <label className='checkbox-inline'>
+            <input type='checkbox' id='inlineCheckbox2' value='option2' /> 2
+          </label>
+          <label className='checkbox-inline'>
+            <input type='checkbox' id='inlineCheckbox3' value='option3' /> 3
+          </label>
+        </div>
+
+        <div className='form-group'>
+          some text {' '}
+          <label className='radio-inline'>
+            <input type='radio' name='inlineRadioOptions' id='inlineRadio1' value='option1' /> 1
+          </label>
+          <label className='radio-inline'>
+            <input type='radio' name='inlineRadioOptions' id='inlineRadio2' value='option2' /> 2
+          </label>
+          <label className='radio-inline'>
+            <input type='radio' name='inlineRadioOptions' id='inlineRadio3' value='option3' /> 3
+          </label>
+        </div>
+        <br />
+        <br />
 
         <div className='form-group'>
           <label htmlFor='slider'>Process nice score from -20 to +20</label>
@@ -91,17 +136,17 @@ export default function Forms () {
         </div>
 
         <div className='form-group'>
-          <select className="form-control input-lg">
+          <select className='form-control input-lg'>
             <option>Large select</option>
           </select>
         </div>
         <div className='form-group'>
-          <select className="form-control">
+          <select className='form-control'>
             <option>Default select</option>
           </select>
         </div>
         <div className='form-group'>
-          <select className="form-control input-sm">
+          <select className='form-control input-sm'>
             <option>Small select</option>
           </select>
         </div>
@@ -184,6 +229,77 @@ export default function Forms () {
           </div>
           <div className='panel-footer'>
             Footer
+          </div>
+        </div>
+      </form>
+
+      <br />
+      <h2>Inline form</h2>
+      <form className='form-inline'>
+        <div className='form-group'>
+          <label for='exampleInputName2'>Name</label>
+          <input type='text' className='form-control' id='exampleInputName2' placeholder='Jane Doe' />
+        </div>
+        <div className='form-group'>
+          <label for='exampleInputEmail2'>Email</label>
+          <input type='email' className='form-control' id='exampleInputEmail2' placeholder='jane.doe@example.com' />
+        </div>
+        <div className='form-group'>
+          <p className='form-control-static'>note</p>
+        </div>
+        <div className='checkbox'>
+          <label>
+            <input type='checkbox' /> Remember me
+          </label>
+        </div>
+        <button type='submit' className='btn btn-default'>Send invitation</button>
+      </form>
+
+      <form className='form-inline'>
+        <div className='form-group'>
+          <input type='text' className='form-control' id='exampleInputName2' placeholder='Jane Doe' />
+        </div>
+        <div className='form-group'>
+          <input type='email' className='form-control' id='exampleInputEmail2' placeholder='jane.doe@example.com' />
+        </div>
+        <div className='input-group'>
+          <span className='input-group-addon' id='sizing-addon2'>@</span>
+          <input type='text' className='form-control' placeholder='Username' aria-describedby='sizing-addon2' />
+          <span className='input-group-addon'>.00</span>
+        </div>
+        <div className='form-group'>
+          <p className='form-control-static'>note</p>
+        </div>
+        <button type='submit' className='btn btn-default'>Send invitation</button>
+      </form>
+
+      <br />
+      <h2>Horizontal form</h2>
+      <form className='form-horizontal'>
+        <div className='form-group'>
+          <label for='inputEmail3' className='col-sm-2 control-label'>Email</label>
+          <div className='col-sm-10'>
+            <input type='email' className='form-control' id='inputEmail3' placeholder='Email' />
+          </div>
+        </div>
+        <div className='form-group'>
+          <label for='inputPassword3' className='col-sm-2 control-label'>Password</label>
+          <div className='col-sm-10'>
+            <input type='password' className='form-control' id='inputPassword3' placeholder='Password' />
+          </div>
+        </div>
+        <div className='form-group'>
+          <div className='col-sm-offset-2 col-sm-10'>
+            <div className='checkbox'>
+              <label>
+                <input type='checkbox' /> Remember me
+              </label>
+            </div>
+          </div>
+        </div>
+        <div className='form-group'>
+          <div className='col-sm-offset-2 col-sm-10'>
+            <button type='submit' className='btn btn-default'>Sign in</button>
           </div>
         </div>
       </form>
