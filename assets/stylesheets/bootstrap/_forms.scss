@@ -49,6 +49,11 @@ input[type="search"] {
 
 input[type="file"] {
   display: block;
+
+  &:focus { // only for chrome & web kit
+    box-shadow: none !important;
+    outline: 0 !important;
+  }
 }
 
 // Make range inputs behave like textual form controls
@@ -214,6 +219,18 @@ select.form-control {
   &::-ms-expand {
     display: none;
   }
+}
+
+// Range
+
+[use-focus] *:focus {
+  @include tab-focus;
+  background-color: pink;
+}
+
+
+input[type="range"] {
+  @include custome-range(18px, 10px);
 }
 
 
