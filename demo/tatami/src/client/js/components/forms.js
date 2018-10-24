@@ -27,7 +27,7 @@ export default function Forms () {
         <div className='form-group'>
           <label className='control-label' htmlFor='exampleInputPassword1'>Password</label>
           <input type='password' className='form-control' id='exampleInputPassword1' placeholder='Password' />
-          <span id='helpBlock' className='help-block'>
+          <span className='help-block'>
             A block of help text that breaks onto a new line and may extend beyond one line.
           </span>
         </div>
@@ -59,26 +59,26 @@ export default function Forms () {
             <input type='checkbox' /> Check me out
           </label>
         </div>
-        <div className='checkbox'>
+        <div className='checkbox disabled'>
           <label>
-            <input type='checkbox'  disabled /> Disabled check
+            <input type='checkbox' disabled /> Disabled check
           </label>
         </div>
         <div className='radio'>
           <label>
-            <input type='radio' name='optionsRadios' id='optionsRadios1' value='option1' />
+            <input type='radio' name='optionsRadios' value='option1' />
             Option one is this and that&mdash;be sure to include why it's great
           </label>
         </div>
         <div className='radio'>
           <label>
-            <input type='radio' name='optionsRadios' id='optionsRadios2' value='option2' />
+            <input type='radio' name='optionsRadios' value='option2' />
             Option two can be something else and selecting it will deselect option one
           </label>
         </div>
-        <div className='radio'>
+        <div className='radio disabled'>
           <label>
-            <input type='radio' name='optionsRadios' id='optionsRadios2' value='option2' disabled />
+            <input type='radio' name='optionsRadios' value='option2' disabled />
             This option is disabled
           </label>
         </div>
@@ -87,26 +87,26 @@ export default function Forms () {
         <h4>Inline checkboxes and radios</h4>
         <div className='form-group'>
           <label className='checkbox-inline'>
-            <input type='checkbox' id='inlineCheckbox1' value='option1' /> 1
+            <input type='checkbox' value='option1' /> 1
           </label>
           <label className='checkbox-inline'>
-            <input type='checkbox' id='inlineCheckbox2' value='option2' /> 2
+            <input type='checkbox' value='option2' /> 2
           </label>
           <label className='checkbox-inline'>
-            <input type='checkbox' id='inlineCheckbox3' value='option3' /> 3
+            <input type='checkbox' value='option3' /> 3
           </label>
         </div>
 
         <div className='form-group'>
           some text {' '}
           <label className='radio-inline'>
-            <input type='radio' name='inlineRadioOptions' id='inlineRadio1' value='option1' /> 1
+            <input type='radio' name='inlineRadioOptions' value='option1' /> 1
           </label>
           <label className='radio-inline'>
-            <input type='radio' name='inlineRadioOptions' id='inlineRadio2' value='option2' /> 2
+            <input type='radio' name='inlineRadioOptions' value='option2' /> 2
           </label>
           <label className='radio-inline'>
-            <input type='radio' name='inlineRadioOptions' id='inlineRadio3' value='option3' /> 3
+            <input type='radio' name='inlineRadioOptions' value='option3' /> 3
           </label>
         </div>
         <br />
@@ -154,21 +154,21 @@ export default function Forms () {
         <h3>Input groups</h3>
 
         <div className='input-group input-group-lg'>
-          <span className='input-group-addon' id='sizing-addon1'>@</span>
+          <span className='input-group-addon'>@</span>
           <input type='text' className='form-control' placeholder='Username' aria-describedby='sizing-addon1' />
           <span className='input-group-addon'>.00</span>
         </div>
         <br />
 
         <div className='input-group'>
-          <span className='input-group-addon' id='sizing-addon2'>@</span>
+          <span className='input-group-addon'>@</span>
           <input type='text' className='form-control' placeholder='Username' aria-describedby='sizing-addon2' />
           <span className='input-group-addon'>.00</span>
         </div>
         <br />
 
         <div className='input-group input-group-sm'>
-          <span className='input-group-addon' id='sizing-addon3'>@</span>
+          <span className='input-group-addon'>@</span>
           <input type='text' className='form-control' placeholder='Username' aria-describedby='sizing-addon3' />
           <span className='input-group-addon'>.00</span>
         </div>
@@ -237,11 +237,11 @@ export default function Forms () {
       <h2>Inline form</h2>
       <form className='form-inline'>
         <div className='form-group'>
-          <label for='exampleInputName2'>Name</label>
+          <label htmlFor='exampleInputName2'>Name</label>
           <input type='text' className='form-control' id='exampleInputName2' placeholder='Jane Doe' />
         </div>
         <div className='form-group'>
-          <label for='exampleInputEmail2'>Email</label>
+          <label htmlFor='exampleInputEmail2'>Email</label>
           <input type='email' className='form-control' id='exampleInputEmail2' placeholder='jane.doe@example.com' />
         </div>
         <div className='form-group'>
@@ -257,13 +257,13 @@ export default function Forms () {
 
       <form className='form-inline'>
         <div className='form-group'>
-          <input type='text' className='form-control' id='exampleInputName2' placeholder='Jane Doe' />
+          <input type='text' className='form-control' placeholder='Jane Doe' />
         </div>
         <div className='form-group'>
-          <input type='email' className='form-control' id='exampleInputEmail2' placeholder='jane.doe@example.com' />
+          <input type='email' className='form-control' placeholder='jane.doe@example.com' />
         </div>
         <div className='input-group'>
-          <span className='input-group-addon' id='sizing-addon2'>@</span>
+          <span className='input-group-addon'>@</span>
           <input type='text' className='form-control' placeholder='Username' aria-describedby='sizing-addon2' />
           <span className='input-group-addon'>.00</span>
         </div>
@@ -277,13 +277,13 @@ export default function Forms () {
       <h2>Horizontal form</h2>
       <form className='form-horizontal'>
         <div className='form-group'>
-          <label for='inputEmail3' className='col-sm-2 control-label'>Email</label>
+          <label htmlFor='inputEmail3' className='col-sm-2 control-label'>Email</label>
           <div className='col-sm-10'>
             <input type='email' className='form-control' id='inputEmail3' placeholder='Email' />
           </div>
         </div>
         <div className='form-group'>
-          <label for='inputPassword3' className='col-sm-2 control-label'>Password</label>
+          <label htmlFor='inputPassword3' className='col-sm-2 control-label'>Password</label>
           <div className='col-sm-10'>
             <input type='password' className='form-control' id='inputPassword3' placeholder='Password' />
           </div>
