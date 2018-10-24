@@ -64,9 +64,9 @@ select[size] {
 }
 
 // Focus for file, radio, and checkbox
+input[type="file"],
 input[type="radio"],
-input[type="checkbox"],
-input[type="file"] {
+input[type="checkbox"] {
   [data-use-focus] &:focus {
     @include tab-focus;
   }
