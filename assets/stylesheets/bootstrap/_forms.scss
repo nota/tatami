@@ -219,7 +219,6 @@ select.form-control {
 
 // Checkboxes and radios
 //
-// Custom design can be applied except for IE11
 
 .radio,
 .checkbox {
@@ -248,8 +247,18 @@ select.form-control {
     background-color: $input-bg;
     transition: background .3s, border-color .3s, box-shadow .3s;
 
+    &::-ms-check  { // for IE11 (not Edge)
+      border: 1px solid $input-border;
+      background-color: $input-bg;
+      color: transparent; // remove color of preset inner circle style
+    }
+
     &:checked {
       border: 6px solid $link-color;
+
+      &::-ms-check  { // for IE11 (not Edge)
+        border: 6px solid $link-color;
+      }
 
       [data-use-focus] &:focus {
         border-color: $link-color; // override tab-focus
@@ -272,14 +281,26 @@ select.form-control {
     background-color: $input-bg;
     transition: background-color .3s, border-color .3s, box-shadow .3s;
 
+    &::-ms-check { // for IE11 (not Edge)
+      border: 1px solid $input-border;
+      border-radius: $input-border-radius;
+      background-color: $input-bg;
+      color: transparent; // remove color of preset check mark style
+    }
+
+    $checkbox-svg: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='8 8 36 36' version='1.1' xml:space='preserve'><path d='M14.1 27.2l7.1 7.2 16.7-16.8' fill='none' stroke='rgba(255,255,255,1)' stroke-width='5'/></svg>";
+
     &:checked {
       border-color: $link-color;
-      background-color: $link-color;
-      $checkbox-svg: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='8 8 36 36' version='1.1' xml:space='preserve'><path d='M14.1 27.2l7.1 7.2 16.7-16.8' fill='none' stroke='rgba(255,255,255,1)' stroke-width='5'/></svg>";
-      background-image: svg-uri($checkbox-svg);
-      background-repeat: no-repeat;
-      background-position: center;
+      background: $link-color svg-uri($checkbox-svg) no-repeat center;
       background-size: 90%;
+
+      // we can not mix ::-ms-check and :checked in the same line
+      &::-ms-check { // for IE11 (not Edge)
+        border-color: $link-color;
+        background: $link-color svg-uri($checkbox-svg) no-repeat center;
+        background-size: 90%;
+      }
     }
   }
 }
@@ -315,6 +336,10 @@ input[type="checkbox"] {
   fieldset[disabled] & {
     cursor: $cursor-disabled;
     background-color: $input-bg-disabled;
+
+    &::-ms-check { // for IE11 (not Edge)
+      background-color: $input-bg-disabled;
+    }
   }
 }
 // These classes are used directly on <label>s
