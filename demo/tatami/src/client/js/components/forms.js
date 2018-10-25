@@ -244,9 +244,6 @@ export default function Forms () {
           <label htmlFor='exampleInputEmail2'>Email</label>
           <input type='email' className='form-control' id='exampleInputEmail2' placeholder='jane.doe@example.com' />
         </div>
-        <div className='form-group'>
-          <p className='form-control-static'>note</p>
-        </div>
         <div className='checkbox'>
           <label>
             <input type='checkbox' /> Remember me
@@ -256,12 +253,6 @@ export default function Forms () {
       </form>
 
       <form className='form-inline'>
-        <div className='form-group'>
-          <input type='text' className='form-control' placeholder='Jane Doe' />
-        </div>
-        <div className='form-group'>
-          <input type='email' className='form-control' placeholder='jane.doe@example.com' />
-        </div>
         <div className='input-group'>
           <span className='input-group-addon'>@</span>
           <input type='text' className='form-control' placeholder='Username' aria-describedby='sizing-addon2' />
