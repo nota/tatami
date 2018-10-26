@@ -129,7 +129,7 @@ module.exports = (() => {
     doUpdate('focus')
 
     // disable hover when focus changed by keyboard
-    if (currentInput === 'keyboard') {
+    if (currentInput === 'keyboard' && window.PointerEvent) {
       currentIntent = currentInput
       doUpdate('hover')
     }
