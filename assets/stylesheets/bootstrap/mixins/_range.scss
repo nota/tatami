@@ -3,7 +3,8 @@
 //  $slider-track-height: 20px;
 //  $slider-thumb-size: 18px;
 //  $slider-track-height: 2px;
-  $slider-thumb-color: #333;
+  $slider-thumb-color: #666;
+  $slider-active-thumb-color: #333;
   $slider-track-color: $input-border;
   $slider-active-track-color: darken($input-border, 20%);
 
@@ -12,6 +13,7 @@
   height: $slider-thumb-size;
   width: 100%;
   cursor: pointer;
+  background: transparent; // for webkit and firefox
   -webkit-appearance: none;
 
   &:disabled {
@@ -51,19 +53,23 @@
   &:active::-webkit-slider-thumb,
   &:hover::-webkit-slider-thumb,
   &:focus::-webkit-slider-thumb {
-    @include acitve-slider-thumb;
+    @include acitve-slider-thumb($slider-active-thumb-color);
   }
+
+//  [use-focus] &:focus::-webkit-slider-thumb {
+//    box-shadow: 0 0 0 3px blue;
+//  }
 
   &:active::-moz-range-thumb,
   &:hover::-moz-range-thumb,
   &:focus::-moz-range-thumb {
-    @include acitve-slider-thumb;
+    @include acitve-slider-thumb($slider-active-thumb-color);
   }
 
   &:active::-ms-thumb,
   &:hover::-ms-thumb,
   &:focus::-ms-thumb {
-    @include acitve-slider-thumb;
+    @include acitve-slider-thumb($slider-active-thumb-color);
   }
 
   &:disabled::-webkit-slider-thumb {
@@ -129,8 +135,9 @@
   transition: transform 0.4s;
 }
 
-@mixin acitve-slider-thumb {
+@mixin acitve-slider-thumb($color) {
   outline: none;
+  background: $color;
 //    transform: scale(1.15);
 }
 

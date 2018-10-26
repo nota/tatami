@@ -49,11 +49,6 @@ input[type="search"] {
 
 input[type="file"] {
   display: block;
-
-  &:focus { // only for chrome & web kit
-    box-shadow: none !important;
-    outline: 0 !important;
-  }
 }
 
 // Make range inputs behave like textual form controls
@@ -68,8 +63,8 @@ select[size] {
   height: auto;
 }
 
-// Focus for file, radio, and checkbox
-input[type="file"],
+// Focus for radio, and checkbox
+//input[type="file"],
 input[type="radio"],
 input[type="checkbox"] {
   [data-use-focus] &:focus {
@@ -221,18 +216,25 @@ select.form-control {
   }
 }
 
-// Range
-
-[use-focus] *:focus {
-  @include tab-focus;
-  background-color: pink;
-}
-
-
 input[type="range"] {
-  @include custome-range(18px, 10px);
+  @include custome-range(18px, 2px);
 }
 
+input.test:hover::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px blue;
+}
+
+// File upload
+// Customizable on chrome and safari only
+//
+
+// use supoprt to appliy only chrome, safari (and not edge)
+@supports (-webkit-appearance: none) and (not (-ms-ime-align:auto)) {
+  input[type="file"] {
+    // show the focus shadow around the ::-webkit-file-upload-button
+    margin: -3px 0 -3px -3px;
+  }
+}
 
 // Checkboxes and radios
 //

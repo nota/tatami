@@ -103,10 +103,10 @@ a.btn {
 // this entity can not be combined
 input::-webkit-file-upload-button {
   @extend .file-upload-btn; // must be extended to have right focus on chrome
-//  @include btn;
-//  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
-  margin-right: 5px;
-  outline: 0;
+
+  margin: 3px; // we need this to show focus shadow
+  margin-right: 40px !important;
+  outline: 0; // remove default focus ring
   -webkit-appearance: none;
 }
 

@@ -114,7 +114,7 @@ export default function Forms () {
 
         <div className='form-group'>
           <label htmlFor='slider'>Process nice score from -20 to +20</label>
-          <input type='range' min='-20' max='20' defaultValue='0' />
+          <input type='range' className='test' min='-20' max='20' defaultValue='0' data-request-use-hocus />
         </div>
 
         <div className='form-group'>
