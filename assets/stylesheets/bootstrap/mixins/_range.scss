@@ -52,7 +52,7 @@
 
   &:active::-webkit-slider-thumb,
   &:hover::-webkit-slider-thumb,
-  &:focus::-webkit-slider-thumb {
+  &.use-focus:focus::-webkit-slider-thumb {
     @include acitve-slider-thumb($slider-active-thumb-color);
   }
 
@@ -62,15 +62,28 @@
 
   &:active::-moz-range-thumb,
   &:hover::-moz-range-thumb,
-  &:focus::-moz-range-thumb {
+  &.use-focus:focus::-moz-range-thumb {
     @include acitve-slider-thumb($slider-active-thumb-color);
   }
 
   &:active::-ms-thumb,
   &:hover::-ms-thumb,
-  &:focus::-ms-thumb {
+  &.use-focus:focus::-ms-thumb {
     @include acitve-slider-thumb($slider-active-thumb-color);
   }
+
+  &.use-focus:focus::-webkit-slider-thumb {
+    @include tab-focus;
+  }
+
+  &.use-focus:focus::-moz-range-thumb {
+    @include tab-focus;
+  }
+
+  &.use-focus:focus::-ms-thumb {
+    @include tab-focus;
+  }
+
 
   &:disabled::-webkit-slider-thumb {
     @include diabled-slider-thumb;
@@ -99,7 +112,7 @@
     border-width: 0; // remove border around the track
     color: transparent; // remove vertical scale lines from on the track
   }
-
+/*
   &:active::-webkit-slider-runnable-track {
     @include active-slider-runnable-track($slider-active-track-color);
   }
@@ -111,7 +124,7 @@
   &:active::-ms-track {
     @include active-slider-runnable-track($slider-active-track-color);
   }
-
+*/
   &:disabled::-webkit-slider-runnable-track {
     @include disabled-slider-runnable-track($slider-track-color);
   }

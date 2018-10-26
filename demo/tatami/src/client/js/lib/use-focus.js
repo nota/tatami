@@ -159,6 +159,16 @@ module.exports = (() => {
         } else {
           delete body.dataset.useFocus
         }
+        const elements = document.querySelectorAll('[data-request-use-focus]')
+        if (elements) {
+          for (const elm of elements) {
+            if (currentInput === 'keyboard') {
+              elm.classList.add('use-focus');
+            } else {
+              elm.classList.remove('use-focus');
+            }
+          }
+        }
         break
       case 'hover':
         if (currentIntent === 'mouse') {

@@ -220,10 +220,6 @@ input[type="range"] {
   @include custome-range(18px, 2px);
 }
 
-input.test:hover::-webkit-slider-thumb {
-  box-shadow: 0 0 0 3px blue;
-}
-
 // File upload
 // Customizable on chrome and safari only
 //
