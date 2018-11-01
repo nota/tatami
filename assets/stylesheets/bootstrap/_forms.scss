@@ -64,7 +64,6 @@ select[size] {
 }
 
 // Focus for radio, and checkbox
-//input[type="file"],
 input[type="radio"],
 input[type="checkbox"] {
   [data-use-focus] &:focus {
@@ -214,8 +213,15 @@ select.form-control {
   &::-ms-expand {
     display: none;
   }
+
+  // Unstyle the active color on `<select>`s in IE10+.
+  &::-ms-value {
+    color: $input-color; // we don't know, why but necessary
+    background-color: transparent;
+  }
 }
 
+// Range
 input[type="range"] {
   @include make-range(18px, 2px);
 }
