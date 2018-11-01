@@ -159,14 +159,14 @@ module.exports = (() => {
         } else {
           delete body.dataset.useFocus
         }
-        const elements = document.querySelectorAll('[data-request-use-focus]')
-        if (elements) {
-          for (const elm of elements) {
-            if (currentInput === 'keyboard') {
-              elm.classList.add('use-focus');
-            } else {
-              elm.classList.remove('use-focus');
-            }
+        // add class that can not apply css with [use-focus] syntax
+        // eg: input[type="range"]:focus::-webkit-slider-thumb
+        const elements = document.querySelectorAll('[data-require-use-focus-class]')
+        for (const element of elements) {
+          if (currentInput === 'keyboard') {
+            element.classList.add('use-focus');
+          } else {
+            element.classList.remove('use-focus');
           }
         }
         break

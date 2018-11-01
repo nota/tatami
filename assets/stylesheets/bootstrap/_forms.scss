@@ -217,7 +217,7 @@ select.form-control {
 }
 
 input[type="range"] {
-  @include custome-range(18px, 2px);
+  @include make-range(18px, 2px);
 }
 
 // File upload

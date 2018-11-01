@@ -1,10 +1,6 @@
-@mixin custome-range($slider-thumb-size: 18px, $slider-track-height: 2px) {
-//  $slider-thumb-size: 80px;//18px;
-//  $slider-track-height: 20px;
-//  $slider-thumb-size: 18px;
-//  $slider-track-height: 2px;
-  $slider-thumb-color: #666;
-  $slider-active-thumb-color: #333;
+@mixin make-range($slider-thumb-size: 18px, $slider-track-height: 2px) {
+  $slider-thumb-color: #444;
+  $slider-active-thumb-color: darken($slider-thumb-color, 20%);
   $slider-track-color: $input-border;
   $slider-active-track-color: darken($input-border, 20%);
 
@@ -27,7 +23,7 @@
   }
 
   // reset track line detail in MS browser
-  // upper is right side of thumb, and lower is left side of thumb
+  // upper is the right side of thumb, and lower is the left side of thumb
   &::-ms-fill-lower,
   &::-ms-fill-upper {
     background: transparent;
@@ -51,23 +47,16 @@
   }
 
   &:active::-webkit-slider-thumb,
-  &:hover::-webkit-slider-thumb,
   &.use-focus:focus::-webkit-slider-thumb {
     @include acitve-slider-thumb($slider-active-thumb-color);
   }
 
-//  [use-focus] &:focus::-webkit-slider-thumb {
-//    box-shadow: 0 0 0 3px blue;
-//  }
-
   &:active::-moz-range-thumb,
-  &:hover::-moz-range-thumb,
   &.use-focus:focus::-moz-range-thumb {
     @include acitve-slider-thumb($slider-active-thumb-color);
   }
 
   &:active::-ms-thumb,
-  &:hover::-ms-thumb,
   &.use-focus:focus::-ms-thumb {
     @include acitve-slider-thumb($slider-active-thumb-color);
   }
@@ -112,19 +101,7 @@
     border-width: 0; // remove border around the track
     color: transparent; // remove vertical scale lines from on the track
   }
-/*
-  &:active::-webkit-slider-runnable-track {
-    @include active-slider-runnable-track($slider-active-track-color);
-  }
 
-  &:active::-moz-range-track {
-    @include active-slider-runnable-track($slider-active-track-color);
-  }
-
-  &:active::-ms-track {
-    @include active-slider-runnable-track($slider-active-track-color);
-  }
-*/
   &:disabled::-webkit-slider-runnable-track {
     @include disabled-slider-runnable-track($slider-track-color);
   }
@@ -145,18 +122,16 @@
   width: $size;
   border-radius: 50%;
   border: 0;
-  transition: transform 0.4s;
 }
 
 @mixin acitve-slider-thumb($color) {
   outline: none;
   background: $color;
-//    transform: scale(1.15);
 }
 
 @mixin diabled-slider-thumb {
   cursor: not-allowed;
-  background: repeating-linear-gradient(45deg, #dddddd, #dddddd 2px, #FFF 2px, #FFF 4px);
+  background: #ccc;
 }
 
 @mixin slider-runnable-track($height, $color) {
@@ -165,11 +140,6 @@
   cursor: pointer;
   border-radius: ceil($height / 2);
   background: $color;
-}
-
-@mixin active-slider-runnable-track($color) {
-  background: $color;
-  transition: background 0.4s;
 }
 
 @mixin disabled-slider-runnable-track($color) {
