@@ -214,7 +214,7 @@ select.form-control {
     display: none;
   }
 
-  // Unstyle the active color on `<select>`s in IE10+.
+  // Unstyle the active color of the selected item in IE10+.
   &::-ms-value {
     color: $input-color; // we don't know, why but necessary
     background-color: transparent;
