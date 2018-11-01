@@ -45,14 +45,10 @@
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
-    @include btn-disabled;
+    cursor: $cursor-disabled;
+    @include opacity(.65);
+    @include box-shadow(none);
   }
-}
-
-@mixin btn-disabled {
-  cursor: $cursor-disabled;
-  @include opacity(.65);
-  @include box-shadow(none);
 }
 
 .btn {
