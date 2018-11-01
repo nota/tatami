@@ -95,8 +95,8 @@ a.btn {
 }
 
 // this entity can not be combined with .btn
-input::-webkit-file-upload-button {
-  @extend .file-upload-btn; // must be extended to have right focus on chrome
+input[type="file"]::-webkit-file-upload-button {
+  @extend .file-upload-btn; // must be extended to have right :focus, :hover, and :active
 
   margin: 3px; // we need this to show focus shadow
   outline: 0; // remove default focus ring
