@@ -43,7 +43,7 @@
 
   &::-ms-thumb {
     @include slider-thumb($slider-thumb-size, $slider-thumb-color);
-    margin-top: 0; // we need this is Edge (not IE)
+    margin-top: 0; // we need this in Edge (not IE)
   }
 
   &:active::-webkit-slider-thumb,
@@ -99,7 +99,7 @@
   &::-ms-track {
     @include slider-runnable-track($slider-track-height, $slider-track-color);
     border-width: 0; // remove border around the track
-    color: transparent; // remove vertical scale lines from on the track
+    color: transparent; // remove vertical scale lines on the track
   }
 
   &:disabled::-webkit-slider-runnable-track {
