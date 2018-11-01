@@ -13,7 +13,7 @@ select.form-control {
 
   // Unstyle the active color of the selected item in IE10+.
   &::-ms-value {
-    color: $input-color; // we don't know, why but necessary
+    color: $input-color; // we don't know why, but necessary
     background-color: transparent;
   }
 }
