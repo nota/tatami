@@ -25,6 +25,10 @@ $ npm run prepare-demo
 $ git push heroku LOCAL_BRANCH_NAME:master
 ```
 
+#### Demos
+- https://pwa-ui.herokuapp.com/demo/tatami/
+- https://pwa-ui.herokuapp.com/demo/tatami/default.html
+
 ### Update github pages
 Before push to master branch, run below command.
 ```
