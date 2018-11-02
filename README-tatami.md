@@ -20,6 +20,11 @@ If the first time, you need to run:
 $ npm run prepare-demo
 ```
 
+### deploy to Heroku
+```
+$ git push heroku LOCAL_BRANCH_NAME:master
+```
+
 ### Update github pages
 Before push to master branch, run below command.
 ```
