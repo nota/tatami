@@ -28,9 +28,3 @@ $ git push heroku-tatami-ui LOCAL_BRANCH_NAME:master
 #### Demos
 - https://tatami-ui.herokuapp.com/
 - https://tatami-ui.herokuapp.com/default.html
-
-### Update github pages
-Before push to master branch, run below command.
-```
-$ npm run build-demo
-```
