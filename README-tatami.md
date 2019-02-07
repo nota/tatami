@@ -20,11 +20,14 @@ If the first time, you need to run:
 $ npm run prepare-demo
 ```
 
-### deploy to Heroku
+### deploy to GitHub Pages
+Static files will be generated in `./demo/tatami/gh-pages/` and deployed to the `origin/gh-pages` branch.
 ```
-$ git push heroku-tatami-ui LOCAL_BRANCH_NAME:master
+$ npm run tatami-gh-pages
 ```
 
 #### Demos
 - https://tatami-ui.herokuapp.com/
 - https://tatami-ui.herokuapp.com/default.html
+- https://nota.github.io/tatami/index.html
+- https://nota.github.io/tatami/default.html
