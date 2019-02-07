@@ -8,4 +8,4 @@ cp -r public gh-pages/public
 cp index.html gh-pages/.
 cp default.html gh-pages/.
 
-# gh-pages -d gh-pages
+gh-pages -d gh-pages
