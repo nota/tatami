@@ -27,7 +27,5 @@ $ npm run tatami-gh-pages
 ```
 
 #### Demos
-- https://tatami-ui.herokuapp.com/
-- https://tatami-ui.herokuapp.com/default.html
-- https://nota.github.io/tatami/index.html
+- https://nota.github.io/tatami/
 - https://nota.github.io/tatami/default.html
