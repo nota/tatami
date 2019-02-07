@@ -20,7 +20,7 @@ If the first time, you need to run:
 $ npm run prepare-demo
 ```
 
-### deploy to GitHub Pages
+### Deploy to GitHub Pages
 Static files will be generated in `./demo/tatami/gh-pages/` and deployed to the `origin/gh-pages` branch.
 ```
 $ npm run tatami-gh-pages
