@@ -10,20 +10,20 @@ Changes to the files in the following directories are monitored and rebuilt.
 The local server also starts up on port 2500.
 
 ```
-$ npm run watch-demo
+$ npm run watch
 ```
 
 Open http://localhost:2500/ in your browser.
 
 If the first time, you need to run:
 ```
-$ npm run prepare-demo
+$ npm run prepare
 ```
 
 ### Deploy to GitHub Pages
 Static files will be generated in `./demo/tatami/gh-pages/` and deployed to the `origin/gh-pages` branch.
 ```
-$ npm run tatami-gh-pages
+$ npm run gh-pages
 ```
 
 #### Demos
