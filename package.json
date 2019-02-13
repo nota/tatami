@@ -39,7 +39,6 @@
   },
   "devDependencies": {
     "ejs": "~2.4.2",
-    "gh-pages": "^2.0.1",
     "mincer": "~1.4.0",
     "node-sass": "^3.8.0",
     "sass-lint": "^1.12.1"
