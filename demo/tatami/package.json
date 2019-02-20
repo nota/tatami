@@ -18,7 +18,7 @@
     "watch:sass": "chokidar 'src/client/css/**/*.scss' '../../assets/stylesheets' -c 'npm run build:sass -- --source-map-embed' --initial",
     "watch:assets": "chokidar 'src/client/img/**' -c 'npm run build:assets' --initial",
     "watch:dev": "npm run start",
-    "gh-pages": "cd demo/tatami && sh ./scripts/gh-pages.sh"
+    "gh-pages": "sh ./scripts/gh-pages.sh"
   },
   "author": "notainc",
   "license": "MIT",

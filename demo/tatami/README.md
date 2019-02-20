@@ -15,11 +15,6 @@ $ npm run watch
 
 Open http://localhost:2500/ in your browser.
 
-If the first time, you need to run:
-```
-$ npm run prepare
-```
-
 ### Deploy to GitHub Pages
 Static files will be generated in `./demo/tatami/gh-pages/` and deployed to the `origin/gh-pages` branch.
 ```
