@@ -1,16 +1,11 @@
 {
-  "name": "tatami",
-  "version": "1.0.0",
+  "name": "@notainc/tatami",
+  "version": "1.0.4",
   "description": "Tatami is Nota's fork of Bootstrap 3. Specialized modern web app UI. Support touch and mouse inputs.",
   "main": "assets/javascripts/bootstrap.js",
   "style": "assets/stylesheets/_bootstrap.scss",
   "sass": "assets/stylesheets/_bootstrap.scss",
   "scripts": {
-    "build-demo": "cd demo/tatami && npm run build",
-    "watch-demo": "cd demo/tatami && npm run watch",
-    "prepare-demo": "cd demo/tatami && npm install",
-    "heroku-postbuild": "cd demo/tatami && npm install && npm run build",
-    "start": "cd demo/tatami && npm run start",
     "sass-lint": "sass-lint -v --no-exit",
     "sass-lint-fix": "sass-lint-auto-fix",
     "test": "npm run sass-lint && sh test/*.sh"
@@ -24,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/twbs/bootstrap-sass"
+    "url": "git+https://github.com/nota/tatami.git"
   },
   "keywords": [
     "bootstrap",
@@ -40,7 +35,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap-sass/issues"
+    "url": "https://github.com/nota/tatami/issues"
   },
   "devDependencies": {
     "ejs": "~2.4.2",
