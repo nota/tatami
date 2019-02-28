@@ -161,6 +161,49 @@ export default function Forms () {
         <br />
         <br />
 
+        <h3>Validation states</h3>
+        <div className="form-group has-success">
+          <label className="control-label" for="inputSuccess1">Input with success</label>
+          <input type="text" className="form-control" id="inputSuccess1" aria-describedby="helpBlock2" />
+          <span id="helpBlock2" className="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+        </div>
+        <div className="form-group has-warning">
+          <label className="control-label" for="inputWarning1">Input with warning</label>
+          <input type="text" className="form-control" id="inputWarning1" />
+        </div>
+        <div className="form-group has-error">
+          <label className="control-label" for="inputError1">Input with error</label>
+          <input type="text" className="form-control" id="inputError1" />
+        </div>
+        <div className="has-success">
+          <div className="checkbox">
+            <label>
+              <input type="checkbox" id="checkboxSuccess" value="option1" />
+              Checkbox with success
+            </label>
+          </div>
+        </div>
+        <div className="has-warning">
+          <div className="checkbox">
+            <label>
+              <input type="checkbox" id="checkboxWarning" value="option1" />
+              Checkbox with warning
+            </label>
+          </div>
+        </div>
+        <div className="has-error">
+          <div className="checkbox">
+            <label>
+              <input type="checkbox" id="checkboxError" value="option1" />
+              Checkbox with error
+            </label>
+          </div>
+        </div>
+
+        <br /><br />
+        <h3>Progress & Uplaod</h3>
+
+
         <div className='form-group'>
           <label htmlFor='slider'>Process nice score from -20 to +20</label>
           <input type='range' min='-20' max='20' defaultValue='0' data-require-focus-visible-class />
