@@ -38,7 +38,7 @@
   background-color: $dropdown-bg;
   border: 1px solid $dropdown-border;
   border-radius: $border-radius-base;
-  @include box-shadow(0 6px 12px rgba(0,0,0,.175));
+  box-shadow: 0 4px 10px rgba(0,0,0,.175);
   background-clip: padding-box;
 
   // Aligns the dropdown menu to right
@@ -67,6 +67,35 @@
   }
 }
 
+// Large size
+
+.dropdown-menu {
+  &.dropdown-menu-lg {
+    padding: 8px 0;
+
+    > li > a {
+      font-size: 15px;
+      line-height: $line-height-computed;
+      padding: 8px 24px;
+
+        // hover / focus
+        &:active,
+        [data-hover-visible] &:hover,
+        [data-focus-visible] &:focus {
+          text-decoration: none;
+          color: $dropdown-link-color;
+          background-color: darken($btn-default-bg, 10%);
+        }
+    }
+
+    .dropdown-header {
+      padding: 3px 24px;
+      font-size: 14px;
+    }
+  }
+
+}
+
 // Hover/Focus state
 .dropdown-menu > li > a {
   &:active,
@@ -75,6 +104,10 @@
     text-decoration: none;
     color: $dropdown-link-hover-color;
     background-color: $dropdown-link-hover-bg;
+  }
+
+  [data-focus-visible] &:focus {
+    box-shadow: none;
   }
 }
 
