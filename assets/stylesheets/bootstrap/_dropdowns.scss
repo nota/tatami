@@ -86,6 +86,13 @@
   }
 }
 
+  &.dropdown-menu-auto-size {
+    @include when-touch-device {
+      @extend .dropdown-menu-lg
+    }
+  }
+}
+
 // Active/Hover/Focus state
 .dropdown-menu > li > a {
   [data-hover-visible] &:hover,
@@ -124,6 +131,43 @@
     background-color: $dropdown-link-active-bg;
   }
 }
+
+// Selected state
+.dropdown-menu > .selected > a {
+  color: $brand-primary;
+}
+
+// Light gray hover style
+.dropdown-menu-light-hover-style {
+  > li > a {
+    // hover / focus
+    [data-hover-visible] &:hover,
+    [data-focus-visible] &:focus {
+      text-decoration: none;
+      color: $dropdown-link-color;
+      background-color: darken($btn-default-bg, 5%);
+    }
+
+    // hover / focus
+    &:active {
+      &,
+      [data-hover-visible] &:hover,
+      [data-focus-visible] &:focus {
+
+        text-decoration: none;
+        color: $dropdown-link-color;
+        background-color: darken($btn-default-bg, 10%);
+
+      }
+    }
+  }
+
+  > .selected > a {
+    color: $brand-primary !important;
+  }
+}
+
+
 
 // Disabled state
 //
