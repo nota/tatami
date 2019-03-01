@@ -116,7 +116,7 @@ export default function Forms () {
         <div className='radio'>
           <label>
             <input type='radio' name='optionsRadios' value='option1' />
-            Option one is this and that&mdash;be sure to include why it's great
+            Option one is this and that&mdash;be sure to include why it’s great
           </label>
         </div>
         <div className='radio'>
