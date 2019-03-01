@@ -163,7 +163,7 @@ export default function Forms () {
 
         <h3>Validation states</h3>
         <div className="form-group has-success">
-          <label className="control-label" for="inputSuccess1">Input with success</label>
+          <label className="control-label" htmlFor="inputSuccess1">Input with success</label>
           <div className='input-group'>
             <div className='input-group-addon'>scrapbox.io/</div>
             <input type='text' className='form-control' id="inputSuccess1" aria-describedby="helpBlock2" />
@@ -171,14 +171,14 @@ export default function Forms () {
           <span id="helpBlock2" className="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
         </div>
         <div className="form-group has-warning">
-          <label className="control-label" for="inputWarning1">Input with warning</label>
+          <label className="control-label" htmlFor="inputWarning1">Input with warning</label>
           <div className='input-group'>
             <div className='input-group-addon'>scrapbox.io/</div>
             <input type='text' className='form-control' id="inputWarning1" />
           </div>
         </div>
         <div className="form-group has-error">
-          <label className="control-label" for="inputError1">Input with error</label>
+          <label className="control-label" htmlFor="inputError1">Input with error</label>
           <div className='input-group'>
             <div className='input-group-addon'>scrapbox.io/</div>
             <input type='text' className='form-control' id="inputError1" />
