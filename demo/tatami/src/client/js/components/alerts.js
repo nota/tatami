@@ -3,7 +3,7 @@ import React from 'react'
 export default function Alerts () {
   return (
     <div>
-      <h2>Alerts</h2>
+      <h1>Alerts</h1>
       <div className='alert alert-default' role='alert'>
         <div className='alert-body'>
           Default. This is sample text.
@@ -55,6 +55,61 @@ export default function Alerts () {
         </button>
       </div>
 
+
+      <h3>Small size</h3>
+      <div className='row'>
+        <div className='col-md-4'>
+          <div className='alert alert-default alert-vertical' role='alert'>
+            <div className='alert-body'>
+              Default. This is sample text.
+              {' '}
+            </div>
+            <button type='button' className='btn btn-default btn-lg btn-block'>
+              Action
+            </button>
+            <button type='button' className='btn btn-default btn-lg btn-block'>
+              Dismiss
+            </button>
+          </div>
+        </div>
+        <div className='col-md-4'>
+          <div className='alert alert-default alert-vertical' role='alert'>
+            <div className='alert-body'>
+              Default. This is sample text.
+              {' '}
+            </div>
+            <button type='button' className='btn btn-default'>
+              Button
+            </button>
+          </div>
+        </div>
+        <div className='col-md-4'>
+          <div className='alert alert-default' role='alert'>
+            <div className='alert-body'>
+              Default. This is sample text.
+              {' '}
+            </div>
+            <button type='button' className='close' data-dismiss='alert' aria-label='Close'>
+              <span aria-hidden='true'>&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <h2>Use cases</h2>
+
+      <h3>Multi lines</h3>
+      <div className='alert alert-danger' role='alert'>
+        <div className='alert-body'>
+          Please update your credit card information to keep your Pro account active. We were not able to process a payment for your Pro account.
+        </div>
+        <button type='button' className='btn btn-default'>
+          Update card
+        </button>
+        <button type='button' className='close' data-dismiss='alert' aria-label='Close'>
+          <span aria-hidden='true'>&times;</span>
+        </button>
+      </div>
       <h3>With heading</h3>
       <div className='alert alert-default' role='alert'>
         <div className='alert-body'>
@@ -63,19 +118,6 @@ export default function Alerts () {
         </div>
       </div>
 
-      <h3>For small display</h3>
-      <div className='alert alert-default alert-vertical' role='alert'>
-        <div className='alert-body'>
-          Default. This is sample text.
-          {' '}
-        </div>
-        <button type='button' className='btn btn-default btn-lg btn-block'>
-          Action
-        </button>
-        <button type='button' className='btn btn-default btn-lg btn-block'>
-          Dismiss
-        </button>
-      </div>
 
     </div>
   )
