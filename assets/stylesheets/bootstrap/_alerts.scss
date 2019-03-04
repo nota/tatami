@@ -18,9 +18,6 @@
 
     > button {
       margin-top: 12px;
-    }
-
-    > button + button {
       margin-left: 0;
     }
   }
@@ -55,9 +52,6 @@
   > button {
     align-self: center;
     flex-shrink: 0;
-  }
-
-  > button + button {
     margin-left: 12px;
   }
 
