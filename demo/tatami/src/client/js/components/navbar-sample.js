@@ -1,4 +1,5 @@
 import React from 'react'
+import Kamon from './kamon'
 
 export default function NavbarSample () {
   return (
@@ -19,7 +20,10 @@ export default function NavbarSample () {
             <li className='active'><a href='javascript:;'>Link <span className='sr-only'>(current)</span></a></li>
             <li><a href='javascript:;'>Link</a></li>
             <li className='dropdown'>
-              <a href='#' className='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Dropdown <span className='caret' /></a>
+              <a href='#' className='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>
+                <span>Dropdown</span>
+                <Kamon name='caret-down' className='caret' />
+              </a>
               <ul className='dropdown-menu'>
                 <li><a href='javascript:;'>Action</a></li>
                 <li><a href='javascript:;'>Another action</a></li>
@@ -40,7 +44,10 @@ export default function NavbarSample () {
           <ul className='nav navbar-nav navbar-right'>
             <li><a href='javascript:;'>Link</a></li>
             <li className='dropdown'>
-              <a href='#' className='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Dropdown <span className='caret' /></a>
+              <a href='#' className='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>
+              <span>Dropdown</span>
+              <Kamon name='caret-down' className='caret' />
+              </a>
               <ul className='dropdown-menu'>
                 <li><a href='javascript:;'>Action</a></li>
                 <li><a href='javascript:;'>Another action</a></li>

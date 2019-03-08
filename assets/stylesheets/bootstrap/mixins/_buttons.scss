@@ -125,7 +125,7 @@
   $line-height-computed: floor(($font-size * $line-height));
   $btn-height: $padding-vertical * 2 + $line-height-computed + 2;
 
-  .kamon {
+  .kamon:not(.caret) {
     width: $icon-size;
     height: $icon-size;
     margin-top: ceil($btn-height / -12);

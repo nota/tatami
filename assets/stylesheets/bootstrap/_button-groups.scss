@@ -109,6 +109,30 @@
 
 // Reposition the caret
 .btn .caret {
+  &:last-child:not(:first-child) {
+    margin-right: -4px;
+    margin-left: 4px;
+  }
+
+  &:first-child,
+  &:only-child {
+    margin: 0 -3px;
+  }
+}
+
+// Carets in other button sizes
+.btn-lg .caret {
+  width: 24px;
+  height: 24px;
+}
+
+// Upside down carets for .dropup
+.dropup .caret {
+  transform: rotate(180deg);
+}
+
+/*
+.btn .caret {
   margin-left: 0;
 }
 // Carets in other button sizes
@@ -120,6 +144,7 @@
 .dropup .btn-lg .caret {
   border-width: 0 $caret-width-large $caret-width-large;
 }
+*/
 
 
 // Vertical button groups
