@@ -1,0 +1,9 @@
+// Color
+
+@mixin color($color) {
+  color: $color;
+
+  svg.kamon {
+    fill: $color;
+  }
+}
