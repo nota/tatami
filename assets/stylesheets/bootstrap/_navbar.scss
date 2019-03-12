@@ -249,6 +249,10 @@
     padding-bottom: 10px;
     line-height: $line-height-computed;
     @include user-select(none);
+
+    .caret {
+      margin-left: 4px;
+    }
   }
 
   @media (max-width: $grid-float-breakpoint-max) {
@@ -425,12 +429,12 @@
 
   .navbar-nav {
     > li > a {
-      color: $navbar-default-link-color;
+      @include color($navbar-default-link-color);
 
       &:active,
       [data-hover-visible] &:hover,
       [data-focus-visible] &:focus {
-        color: $navbar-default-link-hover-color;
+        @include color($navbar-default-link-hover-color);
         background-color: $navbar-default-link-hover-bg;
       }
     }
@@ -439,7 +443,7 @@
       &:active,
       [data-hover-visible] &:hover,
       [data-focus-visible] &:focus {
-        color: $navbar-default-link-active-color;
+        @include color($navbar-default-link-active-color);
         background-color: $navbar-default-link-active-bg;
       }
     }
@@ -448,7 +452,7 @@
       &:active,
       [data-hover-visible] &:hover,
       [data-focus-visible] &:focus {
-        color: $navbar-default-link-disabled-color;
+        @include color($navbar-default-link-disabled-color);
         background-color: $navbar-default-link-disabled-bg;
       }
     }
@@ -481,7 +485,7 @@
       [data-hover-visible] &:hover,
       [data-focus-visible] &:focus {
         background-color: $navbar-default-link-active-bg;
-        color: $navbar-default-link-active-color;
+        @include color($navbar-default-link-active-color);
       }
     }
 
@@ -489,12 +493,12 @@
       // Dropdowns get custom display when collapsed
       .open .dropdown-menu {
         > li > a {
-          color: $navbar-default-link-color;
+          @include color($navbar-default-link-color);
 
           &:active,
           [data-hover-visible] &:hover,
           [data-focus-visible] &:focus {
-            color: $navbar-default-link-hover-color;
+            @include color($navbar-default-link-hover-color);
             background-color: $navbar-default-link-hover-bg;
           }
         }
@@ -503,7 +507,7 @@
           &:active,
           [data-hover-visible] &:hover,
           [data-focus-visible] &:focus {
-            color: $navbar-default-link-active-color;
+            @include color($navbar-default-link-active-color);
             background-color: $navbar-default-link-active-bg;
           }
         }
@@ -512,7 +516,7 @@
           &:active,
           [data-hover-visible] &:hover,
           [data-focus-visible] &:focus {
-            color: $navbar-default-link-disabled-color;
+            @include color($navbar-default-link-active-color);
             background-color: $navbar-default-link-disabled-bg;
           }
         }
@@ -526,25 +530,25 @@
   // Add a class to ensure links outside the navbar nav are colored correctly.
 
   .navbar-link {
-    color: $navbar-default-link-color;
+    @include color($navbar-default-link-color);
 
     [data-hover-visible] &:hover {
-      color: $navbar-default-link-hover-color;
+      @include color($navbar-default-link-hover-color);
     }
   }
 
   .btn-link {
-    color: $navbar-default-link-color;
+    @include color($navbar-default-link-color);
 
     [data-hover-visible] &:hover,
     [data-focus-visible] &:focus {
-      color: $navbar-default-link-hover-color;
+      @include color($navbar-default-link-hover-color);
     }
     &[disabled],
     fieldset[disabled] & {
       [data-hover-visible] &:hover,
       [data-focus-visible] &:focus {
-        color: $navbar-default-link-disabled-color;
+        @include color($navbar-default-link-disabled-color);
       }
     }
   }
@@ -573,12 +577,12 @@
 
   .navbar-nav {
     > li > a {
-      color: $navbar-inverse-link-color;
+      @include color($navbar-inverse-link-color);
 
       &:active,
       [data-hover-visible] &:hover,
       [data-focus-visible] &:focus {
-        color: $navbar-inverse-link-hover-color;
+        @include color($navbar-inverse-link-hover-color);
         background-color: $navbar-inverse-link-hover-bg;
       }
     }
@@ -586,7 +590,7 @@
       &,
       [data-hover-visible] &:hover,
       [data-focus-visible] &:focus {
-        color: $navbar-inverse-link-active-color;
+        @include color($navbar-inverse-link-active-color);
         background-color: $navbar-inverse-link-active-bg;
       }
     }
@@ -594,7 +598,7 @@
       &,
       [data-hover-visible] &:hover,
       [data-focus-visible] &:focus {
-        color: $navbar-inverse-link-disabled-color;
+        @include color($navbar-inverse-link-disabled-color);
         background-color: $navbar-inverse-link-disabled-bg;
       }
     }
@@ -626,7 +630,7 @@
       [data-hover-visible] &:hover,
       [data-focus-visible] &:focus {
         background-color: $navbar-inverse-link-active-bg;
-        color: $navbar-inverse-link-active-color;
+        @include color($navbar-inverse-link-active-color);
       }
     }
 
@@ -640,12 +644,12 @@
           background-color: $navbar-inverse-border;
         }
         > li > a {
-          color: $navbar-inverse-link-color;
+          @include color($navbar-inverse-link-color);
 
           &:active,
           [data-hover-visible] &:hover,
           [data-focus-visible] &:focus {
-            color: $navbar-inverse-link-hover-color;
+            @include color($navbar-inverse-link-hover-color);
             background-color: $navbar-inverse-link-hover-bg;
           }
         }
@@ -654,7 +658,7 @@
           &:active,
           [data-hover-visible] &:hover,
           [data-focus-visible] &:focus {
-            color: $navbar-inverse-link-active-color;
+            @include color($navbar-inverse-link-active-color);
             background-color: $navbar-inverse-link-active-bg;
           }
         }
@@ -663,7 +667,7 @@
           &:active,
           [data-hover-visible] &:hover,
           [data-focus-visible] &:focus {
-            color: $navbar-inverse-link-disabled-color;
+            @include color($navbar-inverse-link-disabled-color);
             background-color: $navbar-inverse-link-disabled-bg;
           }
         }
@@ -672,26 +676,26 @@
   }
 
   .navbar-link {
-    color: $navbar-inverse-link-color;
+    @include color($navbar-inverse-link-color);
 
     [data-hover-visible] &:hover {
-      color: $navbar-inverse-link-hover-color;
+      @include color($navbar-inverse-link-hover-color);
     }
   }
 
   .btn-link {
-    color: $navbar-inverse-link-color;
+    @include color($navbar-inverse-link-color);
 
     [data-hover-visible] &:hover,
     [data-focus-visible] &:focus {
-      color: $navbar-inverse-link-hover-color;
+      @include color($navbar-inverse-link-hover-color);
     }
 
     &[disabled],
     fieldset[disabled] & {
       [data-hover-visible] &:hover,
       [data-focus-visible] &:focus {
-        color: $navbar-inverse-link-disabled-color;
+        @include color($navbar-inverse-link-disabled-color);
       }
     }
   }
