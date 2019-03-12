@@ -201,6 +201,13 @@
   }
 }
 
+.nav-stacked-fixed {
+  > li {
+    > a {
+      border-radius: 0;
+    }
+  }
+}
 
 // Nav variations
 // --------------------------------------------------

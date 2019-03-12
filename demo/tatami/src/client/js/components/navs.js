@@ -58,6 +58,13 @@ export default function Navs () {
         <li role='presentation'><a href='javascript:;'>Messages</a></li>
       </ul>
 
+      <h3>Stacked pills fixed</h3>
+      <ul className='nav nav-pills nav-stacked nav-stacked-fixed'>
+        <li role='presentation' className='active'><a href='javascript:;'>Home</a></li>
+        <li role='presentation' className='disabled'><a href='javascript:;'>Profile</a></li>
+        <li role='presentation'><a href='javascript:;'>Messages</a></li>
+      </ul>
+
       <br /><br />
 
       <h3>Justified</h3>
@@ -125,6 +132,13 @@ export default function Navs () {
 
       <h3>Stacked pills</h3>
       <ul className='nav nav-pills nav-stacked nav-lg'>
+        <li role='presentation' className='active'><a href='javascript:;'>Home</a></li>
+        <li role='presentation' className='disabled'><a href='javascript:;'>Profile</a></li>
+        <li role='presentation'><a href='javascript:;'>Messages</a></li>
+      </ul>
+
+      <h3>Stacked pills fixed</h3>
+      <ul className='nav nav-pills nav-stacked nav-stacked-fixed nav-lg'>
         <li role='presentation' className='active'><a href='javascript:;'>Home</a></li>
         <li role='presentation' className='disabled'><a href='javascript:;'>Profile</a></li>
         <li role='presentation'><a href='javascript:;'>Messages</a></li>
