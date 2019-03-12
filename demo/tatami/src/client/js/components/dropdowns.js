@@ -10,9 +10,9 @@ export default function Dropdowns () {
           Dropdown <span className='caret' />
         </button>
         <ul className='dropdown-menu' aria-labelledby='dropdownMenu1'>
-          <li><a href='javascript:;'>Action</a></li>
-          <li><a href='javascript:;'>Another action</a></li>
-          <li><a href='javascript:;'>Something else here</a></li>
+          <li><a href='javascript:;'>New</a></li>
+          <li><a href='javascript:;'>Save</a></li>
+          <li><a href='javascript:;'>Open in Chrome</a></li>
           <li role='separator' className='divider' />
           <li className='active'><a href='javascript:;'>Active link</a></li>
           <li className='disabled'><a href='javascript:;'>Disabled link</a></li>
@@ -28,9 +28,9 @@ export default function Dropdowns () {
           Dropdown <span className='caret' />
         </button>
         <ul className='dropdown-menu' aria-labelledby='dropdownMenu2'>
-          <li><a href='javascript:;'>Action</a></li>
-          <li><a href='javascript:;'>Another action</a></li>
-          <li><a href='javascript:;'>Something else here</a></li>
+          <li><a href='javascript:;'>New</a></li>
+          <li><a href='javascript:;'>Save</a></li>
+          <li><a href='javascript:;'>Open in Chrome</a></li>
           <li role='separator' className='divider' />
           <li className='active'><a href='javascript:;'>Active link</a></li>
           <li className='disabled'><a href='javascript:;'>Disabled link</a></li>
@@ -46,11 +46,11 @@ export default function Dropdowns () {
           <span className='sr-only'>Toggle Dropdown</span>
         </button>
         <ul className='dropdown-menu'>
-          <li><a href='javascript:;'>Action</a></li>
-          <li><a href='javascript:;'>Another action</a></li>
-          <li><a href='javascript:;'>Something else here</a></li>
+          <li><a href='javascript:;'>New</a></li>
+          <li><a href='javascript:;'>Save</a></li>
+          <li><a href='javascript:;'>Open in Chrome</a></li>
           <li role='separator' className='divider'></li>
-          <li><a href='javascript:;'>Separated link</a></li>
+          <li><a href='javascript:;'>Delete</a></li>
         </ul>
       </div>
       {' '}
@@ -76,14 +76,14 @@ export default function Dropdowns () {
           Dropdown <span className='caret' />
         </button>
         <ul className='dropdown-menu dropdown-menu-lg' aria-labelledby='dropdownMenu2'>
-          <li><a href='javascript:;'>Item title</a></li>
-          <li><a href='javascript:;'>Item title</a></li>
-          <li><a href='javascript:;'>Item title</a></li>
-          <li><a href='javascript:;'>Long item title</a></li>
-          <li><a href='javascript:;'>Item title</a></li>
+          <li><a href='javascript:;'>New</a></li>
+          <li><a href='javascript:;'>Save</a></li>
+          <li><a href='javascript:;'>Open in Chrome</a></li>
+          <li><a href='javascript:;'>Print</a></li>
+          <li><a href='javascript:;'>Share</a></li>
           <li className='dropdown-header'>Header</li>
-          <li><a href='javascript:;'>Item title</a></li>
-          <li><a href='javascript:;'>Item title</a></li>
+          <li><a href='javascript:;'>Download</a></li>
+          <li><a href='javascript:;'>Delete</a></li>
         </ul>
       </div>
     </div>
