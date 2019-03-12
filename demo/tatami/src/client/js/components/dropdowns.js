@@ -3,7 +3,7 @@ import React from 'react'
 export default function Dropdowns () {
   return (
     <div>
-      <h2>Dropdowns</h2>
+      <h1>Dropdowns</h1>
       <div className='dropdown'>
         <button className='btn btn-default dropdown-toggle' type='button' id='dropdownMenu1'
           data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
@@ -18,7 +18,9 @@ export default function Dropdowns () {
           <li className='disabled'><a href='javascript:;'>Disabled link</a></li>
         </ul>
       </div>
-      <hr />
+
+      <br /><br />
+
       <div className='dropdown'>
         <button className='btn btn-clear dropdown-toggle' type='button' id='dropdownMenu2'
           tabIndex='0'
@@ -35,8 +37,7 @@ export default function Dropdowns () {
         </ul>
       </div>
 
-      <br />
-      <br />
+      <br /><br />
 
       <div className='btn-group'>
         <button type='button' className='btn btn-danger'>Action</button>
@@ -45,11 +46,11 @@ export default function Dropdowns () {
           <span className='sr-only'>Toggle Dropdown</span>
         </button>
         <ul className='dropdown-menu'>
-          <li><a href='#'>Action</a></li>
-          <li><a href='#'>Another action</a></li>
-          <li><a href='#'>Something else here</a></li>
+          <li><a href='javascript:;'>Action</a></li>
+          <li><a href='javascript:;'>Another action</a></li>
+          <li><a href='javascript:;'>Something else here</a></li>
           <li role='separator' className='divider'></li>
-          <li><a href='#'>Separated link</a></li>
+          <li><a href='javascript:;'>Separated link</a></li>
         </ul>
       </div>
       {' '}
@@ -60,8 +61,29 @@ export default function Dropdowns () {
           <span className='sr-only'>Toggle Dropdown</span>
         </button>
         <ul className='dropdown-menu'>
-          <li><a href='#'>Action</a></li>
-          <li><a href='#'>Another action</a></li>
+          <li><a href='javascript:;'>Action</a></li>
+          <li><a href='javascript:;'>Another action</a></li>
+        </ul>
+      </div>
+
+      <br /><br />
+      <h3>Large size</h3>
+
+      <div className='dropdown'>
+        <button className='btn btn-clear btn-lg dropdown-toggle' type='button' id='dropdownMenu2'
+          tabIndex='0'
+          data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+          Dropdown <span className='caret' />
+        </button>
+        <ul className='dropdown-menu dropdown-menu-lg' aria-labelledby='dropdownMenu2'>
+          <li><a href='javascript:;'>Item title</a></li>
+          <li><a href='javascript:;'>Item title</a></li>
+          <li><a href='javascript:;'>Item title</a></li>
+          <li><a href='javascript:;'>Long item title</a></li>
+          <li><a href='javascript:;'>Item title</a></li>
+          <li className='dropdown-header'>Header</li>
+          <li><a href='javascript:;'>Item title</a></li>
+          <li><a href='javascript:;'>Item title</a></li>
         </ul>
       </div>
     </div>
