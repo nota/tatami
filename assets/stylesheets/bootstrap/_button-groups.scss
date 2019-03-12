@@ -109,11 +109,16 @@
 
 // Reposition the caret
 .btn .caret {
+
+  // Backward caret
   &:last-child:not(:first-child) {
     margin-right: -4px;
     margin-left: 4px;
   }
 
+  // Caret only
+  // 'first-child' is added to the condition because there is a
+  // case that .sr-only element is used with .caret together.
   &:first-child,
   &:only-child {
     margin: 0 -3px;
@@ -122,29 +127,14 @@
 
 // Carets in other button sizes
 .btn-lg .caret {
-  width: 24px;
-  height: 24px;
+  width: $icon-size-large;
+  height: $icon-size-large;
 }
 
 // Upside down carets for .dropup
 .dropup .caret {
   transform: rotate(180deg);
 }
-
-/*
-.btn .caret {
-  margin-left: 0;
-}
-// Carets in other button sizes
-.btn-lg .caret {
-  border-width: $caret-width-large $caret-width-large 0;
-  border-bottom-width: 0;
-}
-// Upside down carets for .dropup
-.dropup .btn-lg .caret {
-  border-width: 0 $caret-width-large $caret-width-large;
-}
-*/
 
 
 // Vertical button groups

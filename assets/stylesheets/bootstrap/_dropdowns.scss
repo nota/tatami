@@ -5,22 +5,10 @@
 
 // Dropdown arrow/caret
 .caret {
-  width: 20px;
-  height: 20px;
+  width: $icon-size-base;
+  height: $icon-size-bainherit;
   vertical-align: middle;
 }
-
-/*
-.caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
-  border-top:   $caret-width-base dashed;
-  border-right: $caret-width-base solid transparent;
-  border-left:  $caret-width-base solid transparent;
-}*/
 
 // The dropdown wrapper (div)
 .dropup,
@@ -194,12 +182,9 @@
 .dropup,
 .navbar-fixed-bottom .dropdown {
   // Reverse the caret
-  /*
   .caret {
-    border-top: 0;
-    border-bottom: $caret-width-base dashed;
-    content: "";
-  }*/
+    transform: rotate(180deg);
+  }
 
   // Different positioning for bottom up menu
   .dropdown-menu {
