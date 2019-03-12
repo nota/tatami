@@ -84,7 +84,7 @@
         [data-focus-visible] &:focus {
           text-decoration: none;
           color: $dropdown-link-color;
-          background-color: lighten($gray-base, 85%);
+          background-color: darken($btn-default-bg, 10%);
         }
     }
 
