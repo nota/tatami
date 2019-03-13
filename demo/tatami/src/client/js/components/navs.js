@@ -121,7 +121,7 @@ export default function Navs () {
           <a className='dropdown-toggle' data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false'>
             Dropdown <span className='caret'></span>
           </a>
-          <ul className='dropdown-menu'>
+          <ul className='dropdown-menu dropdown-menu-lg'>
             <li><a href='javascript:;'>Action</a></li>
             <li><a href='javascript:;'>Another action</a></li>
           </ul>
@@ -200,7 +200,7 @@ export default function Navs () {
           <a className='dropdown-toggle' data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false'>
             Dropdown <span className='caret'></span>
           </a>
-          <ul className='dropdown-menu'>
+          <ul className='dropdown-menu dropdown-menu-auto-size'>
             <li><a href='javascript:;'>Action</a></li>
             <li><a href='javascript:;'>Another action</a></li>
           </ul>
