@@ -39,7 +39,7 @@ export default function ButtonGroups () {
             Dropdown{' '}
             <span className='caret'></span>
           </button>
-          <ul className='dropdown-menu'>
+          <ul className='dropdown-menu dropdown-menu-auto-size'>
             <li><a href='javascript:;'>Dropdown link</a></li>
             <li><a href='javascript:;'>Dropdown link</a></li>
           </ul>
@@ -78,7 +78,7 @@ export default function ButtonGroups () {
               Dropdown{' '}
               <span className='caret'></span>
             </button>
-            <ul className='dropdown-menu'>
+            <ul className='dropdown-menu dropdown-menu-auto-size'>
               <li><a href='javascript:;'>Dropdown link</a></li>
               <li><a href='javascript:;'>Dropdown link</a></li>
             </ul>
@@ -106,7 +106,7 @@ export default function ButtonGroups () {
             Dropdown{' '}
             <span className='caret'></span>
           </button>
-          <ul className='dropdown-menu'>
+          <ul className='dropdown-menu dropdown-menu-auto-size'>
             <li><a href='javascript:;'>Dropdown link</a></li>
             <li><a href='javascript:;'>Dropdown link</a></li>
           </ul>

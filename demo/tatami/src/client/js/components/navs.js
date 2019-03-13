@@ -99,13 +99,13 @@ export default function Navs () {
         </ul>
         <div className='tab-content'>
           <div role='tabpanel' className='tab-pane active' id='home-lg'>
-            this is home...
+            <div className='text-lg'>this is home...</div>
           </div>
           <div role='tabpanel' className='tab-pane' id='profile-lg'>
-            this is profile...
+            <div className='text-lg'>this is profile...</div>
           </div>
           <div role='tabpanel' className='tab-pane' id='settings-lg'>
-            this is settings...
+            <div className='text-lg'>this is settings...</div>
           </div>
         </div>
       </div>
@@ -178,13 +178,13 @@ export default function Navs () {
         </ul>
         <div className='tab-content'>
           <div role='tabpanel' className='tab-pane active' id='home-auto-size'>
-            this is home...
+            <div className='text-auto-size'>this is home...</div>
           </div>
           <div role='tabpanel' className='tab-pane' id='profile-auto-size'>
-            this is profile...
+            <div className='text-auto-size'>this is profile...</div>
           </div>
           <div role='tabpanel' className='tab-pane' id='settings-auto-size'>
-            this is settings...
+            <div className='text-auto-size'>this is settings...</div>
           </div>
         </div>
       </div>
