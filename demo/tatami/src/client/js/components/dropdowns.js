@@ -71,12 +71,32 @@ export default function Dropdowns () {
 
       <br /><br />
       <h3>Large size</h3>
+      <div className='dropdown'>
+        <button className='btn btn-default btn-lg dropdown-toggle' type='button' id='dropdownMenu1'
+          data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+          <span>Dropdown</span>
+          <Kamon name='caret-down' className='caret' />
+        </button>
+        <ul className='dropdown-menu dropdown-menu-lg' aria-labelledby='dropdownMenu1'>
+        <li><a href='javascript:;'>New</a></li>
+        <li><a href='javascript:;'>Save</a></li>
+        <li><a href='javascript:;'>Open in Chrome</a></li>
+        <li><a href='javascript:;'>Print</a></li>
+        <li><a href='javascript:;'>Share</a></li>
+        <li className='dropdown-header'>Header</li>
+        <li><a href='javascript:;'>Download</a></li>
+        <li><a href='javascript:;'>Delete</a></li>
+        </ul>
+      </div>
+
+      <br /><br />
 
       <div className='dropdown'>
         <button className='btn btn-clear btn-lg dropdown-toggle' type='button' id='dropdownMenu2'
           tabIndex='0'
           data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-          Dropdown <span className='caret' />
+          <span>Dropdown</span>
+          <Kamon name='caret-down' className='caret' />
         </button>
         <ul className='dropdown-menu dropdown-menu-lg' aria-labelledby='dropdownMenu2'>
           <li><a href='javascript:;'>New</a></li>
@@ -87,6 +107,34 @@ export default function Dropdowns () {
           <li className='dropdown-header'>Header</li>
           <li><a href='javascript:;'>Download</a></li>
           <li><a href='javascript:;'>Delete</a></li>
+        </ul>
+      </div>
+
+      <br /><br />
+      <div className='btn-group'>
+        <button type='button' className='btn btn-danger btn-lg'>Action</button>
+        <button type='button' className='btn btn-danger btn-lg dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+          <Kamon name='caret-down' className='caret' />
+          <span className='sr-only'>Toggle Dropdown</span>
+        </button>
+        <ul className='dropdown-menu dropdown-menu-lg'>
+          <li><a href='javascript:;'>New</a></li>
+          <li><a href='javascript:;'>Save</a></li>
+          <li><a href='javascript:;'>Open in Chrome</a></li>
+        </ul>
+      </div>
+
+      <br /><br />
+      <div className='btn-group dropup'>
+        <button type='button' className='btn btn-default btn-lg'>Action</button>
+        <button type='button' className='btn btn-default btn-lg dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+          <Kamon name='caret-down' className='caret' />
+          <span className='sr-only'>Toggle Dropdown</span>
+        </button>
+        <ul className='dropdown-menu dropdown-menu-lg'>
+          <li><a href='javascript:;'>New</a></li>
+          <li><a href='javascript:;'>Save</a></li>
+          <li><a href='javascript:;'>Open in Chrome</a></li>
         </ul>
       </div>
     </div>
