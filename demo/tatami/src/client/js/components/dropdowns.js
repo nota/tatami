@@ -1,4 +1,5 @@
 import React from 'react'
+import Kamon from './kamon'
 
 export default function Dropdowns () {
   return (
@@ -13,6 +14,30 @@ export default function Dropdowns () {
           <li><a href='javascript:;'>Action</a></li>
           <li><a href='javascript:;'>Another action</a></li>
           <li><a href='javascript:;'>Something else here</a></li>
+          <li>
+            <a href='javascript:;'>
+              <Kamon name='trash' />
+              <span>Forward icon</span>
+            </a>
+          </li>
+          <li>
+            <a href='javascript:;'>
+              <span>Backward icon</span>
+              <Kamon name='check' />
+            </a>
+          </li>
+          <li>
+            <a href='javascript:;'>
+              <img src='https://i.gyazo.com/f769ec8c371bce954ea49f2ac7af55cd.png' className='img-circle dropdown-menu-thumbnail' />
+              <span>Thumbnail circle</span>
+            </a>
+          </li>
+          <li>
+            <a href='javascript:;'>
+              <img src='https://i.gyazo.com/f769ec8c371bce954ea49f2ac7af55cd.png' className='dropdown-menu-thumbnail' />
+              <span>Thumbnail rect</span>
+            </a>
+          </li>
           <li role='separator' className='divider' />
           <li className='active'><a href='javascript:;'>Active link</a></li>
           <li className='disabled'><a href='javascript:;'>Disabled link</a></li>
