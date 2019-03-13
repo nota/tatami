@@ -441,10 +441,10 @@ $nav-link-padding-lg:                       11px 24px !default;
 
 //== Tabs
 $nav-tabs-link-color:                       $nav-link-color !default;
-$nav-tabs-link-bg:                          lighten($gray-base, 90%) !default;
+$nav-tabs-link-bg:                          rgba(0, 0, 0, 0.05) !default;
 $nav-tabs-border-color:                     lighten($gray-base, 80%) !default;
 
-$nav-tabs-link-hover-bg:                    darken($nav-tabs-link-bg, 5%) !default;
+$nav-tabs-link-hover-bg:                    rgba(0, 0, 0, 0.1) !default;
 $nav-tabs-link-hover-border-color:          $gray-lighter !default;
 
 $nav-tabs-active-link-hover-bg:             #fff !default;
