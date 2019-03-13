@@ -6,61 +6,61 @@ export default function ButtonGroups () {
     <div>
       <h2>Button groups</h2>
       <div className='btn-group' role='group' aria-label='...'>
-        <button type='button' className='btn btn-default active'>Left</button>
-        <button type='button' className='btn btn-default'>Middle</button>
-        <button type='button' className='btn btn-default'>Right</button>
+        <button type='button' className='btn btn-default btn-auto-size active'>Left</button>
+        <button type='button' className='btn btn-default btn-auto-size'>Middle</button>
+        <button type='button' className='btn btn-default btn-auto-size'>Right</button>
       </div>&nbsp;&nbsp;
 
       <div className='btn-group' role='group' aria-label='...'>
-        <button type='button' className='btn btn-default'>
+        <button type='button' className='btn btn-default btn-auto-size'>
           <Kamon name='share' />
         </button>
-        <button type='button' className='btn btn-default'>
+        <button type='button' className='btn btn-default btn-auto-size'>
           <Kamon name='pencil' />
         </button>
-        <button type='button' className='btn btn-default'>
+        <button type='button' className='btn btn-default btn-auto-size'>
           <Kamon name='card-plus' />
         </button>
-        <button type='button' className='btn btn-default'>
+        <button type='button' className='btn btn-default btn-auto-size'>
           <Kamon name='unlocked' />
         </button>
-        <button type='button' className='btn btn-default'>
+        <button type='button' className='btn btn-default btn-auto-size'>
           <Kamon name='trash' />
         </button>
       </div>
 
       <h4>Vertical</h4>
       <div className='btn-group-vertical' role='group' aria-label='...'>
-        <button type='button' className='btn btn-default'>One</button>
-        <button type='button' className='btn btn-default'>Two</button>
-        <button type='button' className='btn btn-default'>Three</button>
+        <button type='button' className='btn btn-default btn-auto-size'>One</button>
+        <button type='button' className='btn btn-default btn-auto-size'>Two</button>
+        <button type='button' className='btn btn-default btn-auto-size'>Three</button>
         <div className='btn-group' role='group' aria-label='...'>
-          <button type='button' className='btn btn-default dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+          <button type='button' className='btn btn-default btn-auto-size dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
             Dropdown{' '}
             <span className='caret'></span>
           </button>
           <ul className='dropdown-menu'>
-            <li><a href='#'>Dropdown link</a></li>
-            <li><a href='#'>Dropdown link</a></li>
+            <li><a href='javascript:;'>Dropdown link</a></li>
+            <li><a href='javascript:;'>Dropdown link</a></li>
           </ul>
         </div>
-        <button type='button' className='btn btn-default'>Four</button>
+        <button type='button' className='btn btn-default btn-auto-size'>Four</button>
       </div>&nbsp;&nbsp;
 
       <div className='btn-group-vertical' role='group' aria-label='...'>
-        <button type='button' className='btn btn-default'>
+        <button type='button' className='btn btn-default btn-auto-size'>
           <Kamon name='share' />
         </button>
-        <button type='button' className='btn btn-default'>
+        <button type='button' className='btn btn-default btn-auto-size'>
           <Kamon name='pencil' />
         </button>
-        <button type='button' className='btn btn-default'>
+        <button type='button' className='btn btn-default btn-auto-size'>
           <Kamon name='card-plus' />
         </button>
-        <button type='button' className='btn btn-default'>
+        <button type='button' className='btn btn-default btn-auto-size'>
           <Kamon name='unlocked' />
         </button>
-        <button type='button' className='btn btn-default'>
+        <button type='button' className='btn btn-default btn-auto-size'>
           <Kamon name='trash' />
         </button>
       </div>
@@ -68,9 +68,9 @@ export default function ButtonGroups () {
       <h4>Toolbar</h4>
       <div className='btn-toolbar' role='toolbar' aria-label='...'>
         <div className='btn-group' role='group' aria-label='...'>
-          <button type='button' className='btn btn-default'>1</button>
-          <button type='button' className='btn btn-default'>2</button>
-          <button type='button' className='btn btn-default'>3</button>
+          <button type='button' className='btn btn-default btn-auto-size'>1</button>
+          <button type='button' className='btn btn-default btn-auto-size'>2</button>
+          <button type='button' className='btn btn-default btn-auto-size'>3</button>
         </div>
         <div className='btn-group' role='group' aria-label='...'>
           <div className='btn-group' role='group'>
@@ -79,36 +79,36 @@ export default function ButtonGroups () {
               <span className='caret'></span>
             </button>
             <ul className='dropdown-menu'>
-              <li><a href='#'>Dropdown link</a></li>
-              <li><a href='#'>Dropdown link</a></li>
+              <li><a href='javascript:;'>Dropdown link</a></li>
+              <li><a href='javascript:;'>Dropdown link</a></li>
             </ul>
           </div>
-          <button type='button' className='btn btn-default'>4</button>
-          <button type='button' className='btn btn-default'>5</button>
-          <button type='button' className='btn btn-default'>6</button>
+          <button type='button' className='btn btn-default btn-auto-size'>4</button>
+          <button type='button' className='btn btn-default btn-auto-size'>5</button>
+          <button type='button' className='btn btn-default btn-auto-size'>6</button>
         </div>
       </div>
 
       <h4>Small size</h4>
       <div className='btn-group btn-group-sm' role='group' aria-label='...'>
-        <button type='button' className='btn btn-default'>Left</button>
-        <button type='button' className='btn btn-default'>Middle</button>
-        <button type='button' className='btn btn-default'>Right</button>
+        <button type='button' className='btn btn-default btn-auto-size'>Left</button>
+        <button type='button' className='btn btn-default btn-auto-size'>Middle</button>
+        <button type='button' className='btn btn-default btn-auto-size'>Right</button>
       </div>
 
       <h4>Justified</h4>
       <div className='btn-group btn-group-justified' role='group' aria-label='...'>
-        <button type='button' className='btn btn-default'>Left</button>
-        <button type='button' className='btn btn-default'>Middle</button>
-        <button type='button' className='btn btn-default'>Right</button>
+        <button type='button' className='btn btn-default btn-auto-size'>Left</button>
+        <button type='button' className='btn btn-default btn-auto-size'>Middle</button>
+        <button type='button' className='btn btn-default btn-auto-size'>Right</button>
         <div className='btn-group' role='group'>
           <button type='button' className='btn btn-default dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
             Dropdown{' '}
             <span className='caret'></span>
           </button>
           <ul className='dropdown-menu'>
-            <li><a href='#'>Dropdown link</a></li>
-            <li><a href='#'>Dropdown link</a></li>
+            <li><a href='javascript:;'>Dropdown link</a></li>
+            <li><a href='javascript:;'>Dropdown link</a></li>
           </ul>
         </div>
       </div>
