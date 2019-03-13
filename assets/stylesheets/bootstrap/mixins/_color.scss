@@ -1,6 +1,6 @@
 // Color
 
-@mixin color($color) {
+@mixin color-and-fill($color) {
   color: $color;
 
   svg.kamon {
