@@ -106,13 +106,6 @@
       border-radius: 0;
       background-color: $nav-tabs-link-bg;
       color: $nav-tabs-link-color;
-
-      &:active,
-      [data-hover-visible] &:hover,
-      [data-focus-visible] &:focus {
-        color: $nav-tabs-link-color;
-        background-color: $nav-tabs-link-hover-bg;
-      }
     }
 
     // Active state, and its :hover to override normal :hover
