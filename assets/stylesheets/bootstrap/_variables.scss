@@ -87,6 +87,10 @@ $icon-font-name:          "glyphicons-halflings-regular" !default;
 //** Element ID within SVG icon file.
 $icon-font-svg-id:        "glyphicons_halflingsregular" !default;
 
+$icon-size-base: 20px !default;
+$icon-size-large: 24px !default;
+
+
 
 //== Components
 //
@@ -437,10 +441,10 @@ $nav-link-padding-lg:                       11px 24px !default;
 
 //== Tabs
 $nav-tabs-link-color:                       $nav-link-color !default;
-$nav-tabs-link-bg:                          lighten($gray-base, 90%) !default;
+$nav-tabs-link-bg:                          rgba(0, 0, 0, 0.05) !default;
 $nav-tabs-border-color:                     lighten($gray-base, 80%) !default;
 
-$nav-tabs-link-hover-bg:                    darken($nav-tabs-link-bg, 5%) !default;
+$nav-tabs-link-hover-bg:                    rgba(0, 0, 0, 0.1) !default;
 $nav-tabs-link-hover-border-color:          $gray-lighter !default;
 
 $nav-tabs-active-link-hover-bg:             #fff !default;
@@ -598,13 +602,18 @@ $label-link-hover-color:      #fff !default;
 //
 //##
 
+$modal-border-radius:         4px !default;
+
 //** Padding applied to the modal body
-$modal-inner-padding:         15px !default;
+$modal-body-inner-padding:    16px 20px !default;
+
+//** Padding applied to the modal footer
+$modal-footer-inner-padding:  16px 20px 20px 20px !default;
 
 //** Padding applied to the modal title
-$modal-title-padding:         15px !default;
+$modal-title-padding:         16px 20px !default;
 //** Modal title line-height
-$modal-title-line-height:     $line-height-base !default;
+$modal-title-line-height:     $headings-line-height !default;
 
 //** Background color of modal content area
 $modal-content-bg:                             #fff !default;
@@ -616,9 +625,7 @@ $modal-backdrop-bg:           #000 !default;
 //** Modal backdrop opacity
 $modal-backdrop-opacity:      .5 !default;
 //** Modal header border color
-$modal-header-border-color:   #e5e5e5 !default;
-//** Modal footer border color
-$modal-footer-border-color:   $modal-header-border-color !default;
+$modal-header-border-color:   lighten($gray-base, 90%) !default;
 
 $modal-lg:                    900px !default;
 $modal-md:                    600px !default;
