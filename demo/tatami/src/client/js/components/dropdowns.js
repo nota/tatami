@@ -1,7 +1,7 @@
 import React from 'react'
 import Kamon from './kamon'
 
-export default function Dropdowns () {
+export default function Dropdowns() {
   return (
     <div>
       <h1>Dropdowns</h1>
@@ -131,11 +131,46 @@ export default function Dropdowns () {
           <li><a href='javascript:;'>New</a></li>
           <li><a href='javascript:;'>Save</a></li>
           <li><a href='javascript:;'>Open in Chrome</a></li>
-          <li><a href='javascript:;'>Print</a></li>
           <li className='selected'><a href='javascript:;'>Share</a></li>
           <li className='dropdown-header'>Header</li>
-          <li><a href='javascript:;'>Download</a></li>
-          <li><a href='javascript:;'>Delete</a></li>
+          <li className='divier' role='separator' />
+          <li>
+            <a href='javascript:;'>
+              <Kamon name='arrow-down-rect' />
+              <span>Forward icon</span>
+            </a>
+          </li>
+          <li>
+            <a href='javascript:;'>
+              <Kamon name='trash' />
+              <span>Forward icon</span>
+            </a>
+          </li>
+          <li>
+            <a href='javascript:;'>
+              <Kamon name='person' />
+              <span>Forward icon</span>
+            </a>
+          </li>
+          <li role='separator' className='divider' />
+          <li>
+            <a href='javascript:;'>
+              <span>Backward icon</span>
+              <Kamon name='check' />
+            </a>
+          </li>
+          <li>
+            <a href='javascript:;'>
+              <span>Backward icon</span>
+              <Kamon name='locked' />
+            </a>
+          </li>
+          <li>
+            <a href='javascript:;'>
+              <span>Backward icon</span>
+              <Kamon name='star' />
+            </a>
+          </li>
         </ul>
       </div>
 
