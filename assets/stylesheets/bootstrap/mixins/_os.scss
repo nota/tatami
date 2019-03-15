@@ -7,7 +7,7 @@
   }
 }
 
-@mixin when-touch-device {
+@mixin when-touch-device { // sass-lint:disable-line force-attribute-nesting
   @include when-os-is([android, ios]) { // sass-lint:disable-line force-attribute-nesting
     @content;
   }
