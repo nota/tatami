@@ -84,7 +84,15 @@
       font-size: 14px;
     }
   }
+
+  &.dropdown-menu-auto-size {
+    @include when-touch-device {
+      @extend .dropdown-menu-lg
+    }
+  }
 }
+
+
 
 // Active/Hover/Focus state
 .dropdown-menu > li > a {
