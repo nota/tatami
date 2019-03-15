@@ -90,7 +90,7 @@ a.btn {
 }
 // Transparent
 .btn-clear {
-  @include button-transparent($btn-default-color);
+  @include button-transparent($btn-clear-color, $btn-clear-bg, $btn-clear-border);
 }
 
 .file-upload-btn {
@@ -175,7 +175,7 @@ input[type="file"]::-webkit-file-upload-button {
 
 // Vertically space out multiple block buttons
 .btn-block + .btn-block {
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 // Specificity overrides
