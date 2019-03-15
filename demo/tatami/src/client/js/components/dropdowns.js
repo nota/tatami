@@ -17,6 +17,57 @@ export default function Dropdowns () {
           <li role='separator' className='divider' />
           <li className='selected'><a href='javascript:;'>Selected link</a></li>
           <li className='disabled'><a href='javascript:;'>Disabled link</a></li>
+          <li role='separator' className='divider' />
+          <li>
+            <a href='javascript:;'>
+              <Kamon name='arrow-down-rect' />
+              <span>Forward icon</span>
+            </a>
+          </li>
+          <li>
+            <a href='javascript:;'>
+              <Kamon name='trash' />
+              <span>Forward icon</span>
+            </a>
+          </li>
+          <li>
+            <a href='javascript:;'>
+              <Kamon name='person' />
+              <span>Forward icon</span>
+            </a>
+          </li>
+          <li role='separator' className='divider' />
+          <li>
+            <a href='javascript:;'>
+              <span>Backward icon</span>
+              <Kamon name='check' />
+            </a>
+          </li>
+          <li>
+            <a href='javascript:;'>
+              <span>Backward icon</span>
+              <Kamon name='locked' />
+            </a>
+          </li>
+          <li>
+            <a href='javascript:;'>
+              <span>Backeard icon</span>
+              <Kamon name='star' />
+            </a>
+          </li>
+          <li role='separator' className='divider' />
+          <li>
+            <a href='javascript:;'>
+              <img className='dropdown-menu-thumbnail' src='https://i.gyazo.com/6443b0ef2268925c2551b125ff500480.jpg' />
+              <span>Rect thumbnail</span>
+            </a>
+          </li>
+          <li>
+            <a href='javascript:;'>
+              <img className='dropdown-menu-thumbnail img-circle' src='https://i.gyazo.com/6443b0ef2268925c2551b125ff500480.jpg' />
+              <span>Circle thumbnail</span>
+            </a>
+          </li>
         </ul>
       </div>
 
