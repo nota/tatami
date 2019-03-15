@@ -88,22 +88,20 @@
 
 // Active/Hover/Focus state
 .dropdown-menu > li > a {
-  [data-hover-visible] &:hover {
+  [data-hover-visible] &:hover,
+  [data-focus-visible] &:focus {
     text-decoration: none;
     color: $dropdown-link-hover-color;
     background-color: $dropdown-link-hover-bg;
   }
 
-  [data-focus-visible] &:focus,
-  &:active,
-  [data-hover-visible] &:hover:active {
-    text-decoration: none;
-    color: $dropdown-link-hover-color;
-    background-color: darken($btn-default-bg, 10%);
-  }
-
-  [data-focus-visible] &:focus {
-    box-shadow: none;
+  &:active {
+    &,
+    [data-hover-visible] &:hover {
+      text-decoration: none;
+      color: $dropdown-link-hover-color;
+      background-color: darken($btn-default-bg, 10%);
+    }
   }
 }
 
