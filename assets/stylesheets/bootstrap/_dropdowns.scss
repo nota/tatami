@@ -84,7 +84,6 @@
       font-size: 14px;
     }
   }
-}
 
   &.dropdown-menu-auto-size {
     @include when-touch-device {
@@ -130,11 +129,6 @@
     outline: 0;
     background-color: $dropdown-link-active-bg;
   }
-}
-
-// Selected state
-.dropdown-menu > .selected > a {
-  color: $brand-primary;
 }
 
 // Light gray hover style
