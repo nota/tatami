@@ -61,8 +61,8 @@
     clear: both;
     font-weight: normal;
     line-height: $line-height-base;
-    color: $dropdown-link-color;
     white-space: nowrap; // prevent links from randomly breaking onto new lines
+    @include color-and-fill($dropdown-link-color);
     @include user-select(none);
   }
 
@@ -73,14 +73,17 @@
     fill: $dropdown-link-color;
     vertical-align: middle;
 
+    // Forward icon
     &:first-child {
       float: left;
       margin-right: 12px;
     }
 
+    // Backward icon
     &:last-child {
       float: right;
       margin-left: 12px;
+      opacity: .5;
     }
   }
 
@@ -119,7 +122,7 @@
   [data-hover-visible] &:hover,
   [data-focus-visible] &:focus {
     text-decoration: none;
-    color: $dropdown-link-hover-color;
+    @include color-and-fill($dropdown-link-hover-color);
     background-color: $dropdown-link-hover-bg;
   }
 
@@ -141,7 +144,7 @@
   &:active,
   [data-hover-visible] &:hover,
   [data-focus-visible] &:focus {
-    color: $dropdown-link-active-color;
+    @include color-and-fill($dropdown-link-active-color);
     text-decoration: none;
     outline: 0;
     background-color: $dropdown-link-active-bg;
@@ -150,7 +153,7 @@
 
 // Selected state
 .dropdown-menu > .selected > a {
-  color: $brand-primary;
+  @include color-and-fill($brand-primary);
 }
 
 // Light gray hover style
@@ -160,7 +163,7 @@
     [data-hover-visible] &:hover,
     [data-focus-visible] &:focus {
       text-decoration: none;
-      color: $dropdown-link-color;
+      @include color-and-fill($dropdown-link-color);
       background-color: darken($btn-default-bg, 5%);
     }
 
@@ -171,7 +174,7 @@
       [data-focus-visible] &:focus {
 
         text-decoration: none;
-        color: $dropdown-link-color;
+        @include color-and-fill($dropdown-link-color);
         background-color: darken($btn-default-bg, 10%);
 
       }
@@ -179,7 +182,7 @@
   }
 
   > .selected > a {
-    color: $brand-primary !important;
+    @include color-and-fill($brand-primary);
   }
 }
 
@@ -194,7 +197,7 @@
   &:active,
   [data-hover-visible] &:hover,
   [data-focus-visible] &:focus {
-    color: $dropdown-link-disabled-color;
+    @include color-and-fill($dropdown-link-disabled-color);
   }
 
   // Nuke hover/active/focus effects
@@ -246,7 +249,7 @@
   padding: 3px 20px;
   font-size: $font-size-small;
   line-height: $line-height-base;
-  color: $dropdown-header-color;
+  @include color-and-fill($dropdown-header-color);
   white-space: nowrap; // as with > li > a
 }
 
