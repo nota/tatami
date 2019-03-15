@@ -81,6 +81,7 @@
 
     // Backward icon
     &:last-child {
+      margin-right: -4px;
       float: right;
       margin-left: 12px;
       opacity: .5;
@@ -98,7 +99,6 @@
 }
 
 // Large size
-
 .dropdown-menu {
   &.dropdown-menu-lg {
     padding: 11px 0;
