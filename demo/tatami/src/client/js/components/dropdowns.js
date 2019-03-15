@@ -101,7 +101,7 @@ export default function Dropdowns () {
           <li><a href='javascript:;'>Save</a></li>
           <li><a href='javascript:;'>Open in Chrome</a></li>
           <li><a href='javascript:;'>Print</a></li>
-          <li className='selected'><a href='javascript:;'>Share</a></li>
+          <li><a href='javascript:;'>Share</a></li>
           <li className='dropdown-header'>Header</li>
           <li><a href='javascript:;'>Download</a></li>
           <li><a href='javascript:;'>Delete</a></li>
