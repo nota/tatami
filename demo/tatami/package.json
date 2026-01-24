@@ -42,7 +42,7 @@
     "browserify-notify": "^1.1.2",
     "browserify-shim": "^3.8.14",
     "browserify-zlib": "^0.2.0",
-    "chokidar-cli": "^1.2.0",
+    "chokidar-cli": "^1.2.1",
     "dateformat": "^3.0.3",
     "debug": "^3.1.0",
     "focus-visible": "^4.1.4",
